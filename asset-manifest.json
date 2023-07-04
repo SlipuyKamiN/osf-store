@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/osf-store/static/css/main.6b7d441d.css",
+    "main.css": "/osf-store/static/css/main.b7d373b8.css",
     "main.js": "/osf-store/static/js/main.3973829b.js",
     "index.html": "/osf-store/index.html",
-    "main.6b7d441d.css.map": "/osf-store/static/css/main.6b7d441d.css.map",
+    "main.b7d373b8.css.map": "/osf-store/static/css/main.b7d373b8.css.map",
     "main.3973829b.js.map": "/osf-store/static/js/main.3973829b.js.map"
   },
   "entrypoints": [
-    "static/css/main.6b7d441d.css",
+    "static/css/main.b7d373b8.css",
     "static/js/main.3973829b.js"
   ]
 }
