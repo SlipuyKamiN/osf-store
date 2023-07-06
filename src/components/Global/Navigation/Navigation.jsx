@@ -1,14 +1,19 @@
 import { services } from 'data/services';
 import {
+  CaretDownIcon,
+  CategoriesListWrapper,
+  Img,
   Nav,
   NavigationLink,
   NavigationList,
   NavigationListItem,
+  ServiceTitle,
+  ServicesList,
   ServicesWrapper,
 } from './Navigation.styled';
 import { Link } from 'react-router-dom';
 import navImage from 'images/nav-image.jpeg';
-import navImage2x from 'images/nav-image@2x.png';
+import navImage2x from 'images/nav-image@2x.jpg';
 import { useState } from 'react';
 
 const Navigation = () => {
@@ -22,43 +27,45 @@ const Navigation = () => {
             onClick={() => {
               setIsServicesOpen(!isServicesOpen);
             }}
+            className={isServicesOpen ? 'active' : ''}
           >
             Services
+            <CaretDownIcon className="icon-caret-down" />
           </NavigationLink>
         </NavigationListItem>
         <NavigationListItem>
-          <NavigationLink to="ErrorPage">Company</NavigationLink>
+          <NavigationLink to="Company">Company</NavigationLink>
         </NavigationListItem>
         <NavigationListItem>
-          <NavigationLink to="ErrorPage">Library</NavigationLink>
+          <NavigationLink to="Library">Library</NavigationLink>
         </NavigationListItem>
         <NavigationListItem>
-          <NavigationLink to="ErrorPage">Contact us</NavigationLink>
+          <NavigationLink to="ContactUs">Contact us</NavigationLink>
         </NavigationListItem>
       </NavigationList>
       {isServicesOpen && (
         <ServicesWrapper>
-          <div>
-            <h3>Product Categories</h3>
-            <ul>
+          <CategoriesListWrapper>
+            <ServiceTitle>Product Categories</ServiceTitle>
+            <ServicesList>
               {services.productCategories.map(item => (
                 <li key={item}>
-                  <Link>{item}</Link>
+                  <Link to={item}>{item}</Link>
                 </li>
               ))}
-            </ul>
-          </div>
+            </ServicesList>
+          </CategoriesListWrapper>
           <div>
-            <h3>Sale</h3>
-            <ul>
+            <ServiceTitle>Sale</ServiceTitle>
+            <ServicesList>
               {services.sale.map(item => (
                 <li key={item}>
-                  <Link>{item}</Link>
+                  <Link to={item}>{item}</Link>
                 </li>
               ))}
-            </ul>
+            </ServicesList>
           </div>
-          <img
+          <Img
             srcSet={`${navImage} 1x, ${navImage2x} 2x`}
             width={272}
             src={navImage}

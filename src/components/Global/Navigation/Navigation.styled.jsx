@@ -17,19 +17,27 @@ export const NavigationList = styled.ul`
 
 export const NavigationListItem = styled.li`
   height: 100%;
-  padding: 19px 0;
+  padding: 19px 0 25px;
+`;
+
+export const CaretDownIcon = styled.span`
+  margin-left: 10px;
+  rotate: ${props => (props.isOpen ? '180deg' : 0)};
 `;
 
 export const NavigationLink = styled(Link)`
   font-size: 14px;
-  padding: 19px 13px;
+  padding: 19px 13px 25px;
   text-transform: uppercase;
+  border-bottom: 3px solid transparent;
   color: ${colors.fontGray};
   transition: background-color ${transition.duration},
     color ${transition.duration}, border-color ${transition.duration};
 
   &:hover,
-  &:focus {
+  &:focus,
+  &.active {
+    color: ${colors.primaryWhite};
     background-color: ${colors.primaryBg};
     border-bottom: 3px solid ${colors.accentGreen};
   }
@@ -37,10 +45,37 @@ export const NavigationLink = styled(Link)`
 
 export const ServicesWrapper = styled.div`
   position: absolute;
+  display: flex;
+  justify-content: space-between;
   top: 78px;
   left: -55px;
   width: 1280px;
-  display: flex;
+  height: 383px;
+
+  padding: 60px 64px 52px;
+
   background-color: ${colors.primaryBg};
   color: ${colors.primaryWhite};
+`;
+
+export const CategoriesListWrapper = styled.div`
+  flex-shrink: 0;
+  width: 551px;
+`;
+
+export const ServiceTitle = styled.h3`
+  margin-bottom: 30px;
+`;
+
+export const ServicesList = styled.ul`
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-height: 229px;
+  row-gap: 14px;
+`;
+
+export const Img = styled.img`
+  border-radius: 6px;
 `;

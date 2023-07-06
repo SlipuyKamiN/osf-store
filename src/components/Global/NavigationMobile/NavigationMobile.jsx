@@ -1,16 +1,22 @@
 import pageLogo from 'images/page-logo.jpeg';
 import pageLogo2x from 'images/page-logo@2x.jpeg';
 import navImage from 'images/nav-image.jpeg';
-import navImage2x from 'images/nav-image@2x.png';
+import navImage2x from 'images/nav-image@2x.jpg';
 import {
   MobileHeaderWrapper,
-  NavigationListWrapper,
+  NavigationLink,
+  NavigationList,
+  MobileNavigationWrapper,
   PageLogoWrapper,
+  ServiceLink,
+  ServicesList,
+  SubList,
   ToggleNavigationBtn,
 } from './NavigationMobile.styled';
-import { Link } from 'react-router-dom';
 import { services } from 'data/services';
 import { useState } from 'react';
+import { CaretDownIcon, Img } from '../Navigation/Navigation.styled';
+import { Link } from 'react-router-dom';
 
 const NavigationMobile = () => {
   const [isNavigationOpen, setIsNavigationOpen] = useState(false);
@@ -25,7 +31,9 @@ const NavigationMobile = () => {
           setIsNavigationOpen(!isNavigationOpen);
         }}
       >
-        X
+        <span
+          className={isNavigationOpen ? 'icon-x-close' : 'icon-drop-closed'}
+        ></span>
       </ToggleNavigationBtn>
       <PageLogoWrapper href="/osf-store">
         <img
@@ -38,73 +46,94 @@ const NavigationMobile = () => {
         />
       </PageLogoWrapper>
       {isNavigationOpen && (
-        <NavigationListWrapper>
-          <ul>
+        <MobileNavigationWrapper>
+          <NavigationList>
             <li>
-              <Link
+              <NavigationLink
                 onClick={() => {
                   setIsServicesListOpen(!isServicesListOpen);
                 }}
               >
                 Services
-              </Link>
+                <CaretDownIcon
+                  className="icon-caret-down"
+                  isOpen={isServicesListOpen}
+                />
+              </NavigationLink>
               {isServicesListOpen && (
-                <ul>
+                <ServicesList>
                   <li>
-                    <Link
+                    <ServiceLink
                       onClick={() => {
                         setIsCategoriesListOpen(!isCategoriesListOpen);
                       }}
                     >
                       Product categories
-                    </Link>
+                      <CaretDownIcon
+                        className="icon-caret-down"
+                        isOpen={isCategoriesListOpen}
+                      />
+                    </ServiceLink>
                     {isCategoriesListOpen && (
-                      <ul>
+                      <SubList>
                         {services.productCategories.map(item => (
                           <li key={item}>
-                            <Link>{item}</Link>
+                            <Link to={item}>{item}</Link>
                           </li>
                         ))}
-                      </ul>
+                      </SubList>
                     )}
                   </li>
                   <li>
-                    <Link
+                    <ServiceLink
                       onClick={() => {
                         setIsSaleListOpen(!isSaleListOpen);
                       }}
                     >
                       Sale
-                    </Link>
-                    <ul>
+                      <CaretDownIcon
+                        className="icon-caret-down"
+                        isOpen={isSaleListOpen}
+                      />
+                    </ServiceLink>
+                    <SubList>
                       {isSaleListOpen &&
                         services.sale.map(item => (
                           <li>
-                            <Link>{item}</Link>
+                            <Link to={item}>{item}</Link>
                           </li>
                         ))}
-                    </ul>
+                    </SubList>
                   </li>
-                </ul>
+                </ServicesList>
               )}
             </li>
             <li>
-              <Link>Company</Link>
+              <NavigationLink>
+                Company
+                <CaretDownIcon className="icon-caret-down" />
+              </NavigationLink>
             </li>
             <li>
-              <Link>Library</Link>
+              <NavigationLink>
+                Library
+                <CaretDownIcon className="icon-caret-down" />
+              </NavigationLink>
             </li>
             <li>
-              <Link>Contact us</Link>
+              <NavigationLink>
+                Contact us
+                <CaretDownIcon className="icon-caret-down" />
+              </NavigationLink>
             </li>
-          </ul>
-          <img
+          </NavigationList>
+          <Img
             srcSet={`${navImage} 1x, ${navImage2x} 2x`}
             width={272}
             src={navImage}
             alt="girl"
           />
-        </NavigationListWrapper>
+        </MobileNavigationWrapper>
       )}
     </MobileHeaderWrapper>
   );
