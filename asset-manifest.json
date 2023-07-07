@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/osf-store/static/css/main.105d6c7e.css",
-    "main.js": "/osf-store/static/js/main.9ea6d1c1.js",
+    "main.css": "/osf-store/static/css/main.af07f8ff.css",
+    "main.js": "/osf-store/static/js/main.9adb3122.js",
     "static/media/nav-image@2x.jpg": "/osf-store/static/media/nav-image@2x.d3b7ac9dedd8cd2538fe.jpg",
     "static/media/nav-image.jpeg": "/osf-store/static/media/nav-image.63726d5c0b3f15726bdc.jpeg",
     "static/media/page-logo@2x.jpeg": "/osf-store/static/media/page-logo@2x.c22cf00eff17bdea03d1.jpeg",
@@ -11,11 +11,11 @@
     "static/media/icomoon.woff?dcjp32": "/osf-store/static/media/icomoon.ca8069e656ff10059618.woff",
     "static/media/icomoon.ttf?dcjp32": "/osf-store/static/media/icomoon.44698020ee8839cbabc0.ttf",
     "index.html": "/osf-store/index.html",
-    "main.105d6c7e.css.map": "/osf-store/static/css/main.105d6c7e.css.map",
-    "main.9ea6d1c1.js.map": "/osf-store/static/js/main.9ea6d1c1.js.map"
+    "main.af07f8ff.css.map": "/osf-store/static/css/main.af07f8ff.css.map",
+    "main.9adb3122.js.map": "/osf-store/static/js/main.9adb3122.js.map"
   },
   "entrypoints": [
-    "static/css/main.105d6c7e.css",
-    "static/js/main.9ea6d1c1.js"
+    "static/css/main.af07f8ff.css",
+    "static/js/main.9adb3122.js"
   ]
 }
