@@ -32,17 +32,6 @@ export const CopyrightText = styled.p`
   }
 `;
 
-export const AddressText = styled.address`
-  max-width: 200px;
-  line-height: 1.26;
-  margin-top: 22px;
-  margin-bottom: 23px;
-
-  @media screen and (min-width: 1280px) {
-    margin-top: 17px;
-  }
-`;
-
 export const BlockTitle = styled.button`
   display: flex;
   align-items: center;
@@ -60,75 +49,10 @@ export const BlockTitle = styled.button`
   font-weight: 600;
 `;
 
-export const ContactList = styled.ul`
-  li:not(:last-child) {
-    margin-bottom: 23px;
-  }
-`;
-
-export const ContactLink = styled.a`
-  &:hover,
-  &:focus {
-    color: ${colors.accentGreen};
-  }
-`;
-
-export const BlockList = styled.ul`
-  padding-top: 10px;
-  padding-left: 10px;
-
-  li:not(:last-child) {
-    margin-bottom: 8px;
-  }
-
-  @media screen and (min-width: 1280px) {
-    padding: 0;
-    margin-top: 30px;
-
-    li:not(:last-child) {
-      margin-bottom: 20px;
-    }
-  }
-`;
-
-export const CategoriesList = styled(BlockList)`
-  @media screen and (min-width: 1280px) {
-    max-height: 227px;
-    width: 500px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
-`;
-
 export const ListLink = styled(Link)`
   opacity: 0.7;
   &:hover,
   &:focus {
     color: ${colors.accentGreen};
-  }
-`;
-
-export const ContactIconsList = styled.ul`
-  display: flex;
-  margin: 0 auto;
-  width: 122px;
-  justify-content: space-between;
-`;
-
-export const ContactIconLink = styled.a`
-  font-size: 20px;
-  color: ${colors.gray};
-
-  &:hover,
-  &:focus {
-    color: ${colors.accentGreen};
-  }
-  span {
-    position: absolute;
-    left: -1;
-    visibility: hidden;
-    pointer-events: none;
-    opacity: 0;
   }
 `;
