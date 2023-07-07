@@ -1,5 +1,6 @@
 import ImageGallery from 'react-image-gallery';
 import BannerDescription from './BannerDescription';
+import { BannerSection } from './BannerDescription.styled';
 
 const images = [
   {
@@ -21,16 +22,18 @@ const images = [
 
 const CarouselBanner = () => {
   return (
-    <ImageGallery
-      originalWidth="100%"
-      originalHeight="250px"
-      items={images}
-      showNav={false}
-      showThumbnails={false}
-      showFullscreenButton={false}
-      showPlayButton={false}
-      showBullets={true}
-    />
+    <BannerSection>
+      <ImageGallery
+        originalWidth="100%"
+        originalHeight="250px"
+        items={images}
+        showNav={false}
+        showThumbnails={false}
+        showFullscreenButton={false}
+        showPlayButton={false}
+        showBullets={true}
+      />
+    </BannerSection>
   );
 };
 

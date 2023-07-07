@@ -1,7 +1,13 @@
 import CarouselBanner from 'components/Homepage/CarouselBanner/CarouselBanner';
+import PopularItems from 'components/Homepage/PopularItems';
 
 const Home = () => {
-  return <CarouselBanner />;
+  return (
+    <>
+      <CarouselBanner />
+      <PopularItems />
+    </>
+  );
 };
 
 export default Home;

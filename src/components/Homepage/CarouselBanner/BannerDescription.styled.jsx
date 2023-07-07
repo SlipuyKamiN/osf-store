@@ -1,7 +1,12 @@
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 
-export const Banner = styled.section`
+export const BannerSection = styled.section`
+  border-radius: 6px;
+  overflow: hidden;
+`;
+
+export const Banner = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
