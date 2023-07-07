@@ -8,22 +8,15 @@ import {
   NavigationList,
   MobileNavigationWrapper,
   PageLogoWrapper,
-  ServiceLink,
-  ServicesList,
-  SubList,
   ToggleNavigationBtn,
 } from './NavigationMobile.styled';
-import { services } from 'data/services';
 import { useState } from 'react';
 import { Img } from '../Navigation/Navigation.styled';
-import { Link } from 'react-router-dom';
 import CaretDownIcon from '../CaretDownIcon';
+import ServicesSubList from './ServicesSubList';
 
 const NavigationMobile = () => {
   const [isNavigationOpen, setIsNavigationOpen] = useState(false);
-  const [isServicesListOpen, setIsServicesListOpen] = useState(false);
-  const [isCategoriesListOpen, setIsCategoriesListOpen] = useState(false);
-  const [isSaleListOpen, setIsSaleListOpen] = useState(false);
 
   return (
     <MobileHeaderWrapper>
@@ -50,55 +43,7 @@ const NavigationMobile = () => {
         <MobileNavigationWrapper>
           <NavigationList>
             <li>
-              <NavigationLink
-                onClick={() => {
-                  setIsServicesListOpen(!isServicesListOpen);
-                }}
-              >
-                Services
-                <CaretDownIcon isOpen={isServicesListOpen} />
-              </NavigationLink>
-              {isServicesListOpen && (
-                <ServicesList>
-                  <li>
-                    <ServiceLink
-                      onClick={() => {
-                        setIsCategoriesListOpen(!isCategoriesListOpen);
-                      }}
-                    >
-                      Product categories
-                      <CaretDownIcon isOpen={isCategoriesListOpen} />
-                    </ServiceLink>
-                    {isCategoriesListOpen && (
-                      <SubList>
-                        {services.productCategories.map(item => (
-                          <li key={item}>
-                            <Link to={item}>{item}</Link>
-                          </li>
-                        ))}
-                      </SubList>
-                    )}
-                  </li>
-                  <li>
-                    <ServiceLink
-                      onClick={() => {
-                        setIsSaleListOpen(!isSaleListOpen);
-                      }}
-                    >
-                      Sale
-                      <CaretDownIcon isOpen={isSaleListOpen} />
-                    </ServiceLink>
-                    <SubList>
-                      {isSaleListOpen &&
-                        services.sale.map(item => (
-                          <li>
-                            <Link to={item}>{item}</Link>
-                          </li>
-                        ))}
-                    </SubList>
-                  </li>
-                </ServicesList>
-              )}
+              <ServicesSubList />
             </li>
             <li>
               <NavigationLink>

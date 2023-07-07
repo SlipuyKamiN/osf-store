@@ -62,25 +62,6 @@ export const NavigationList = styled.ul`
   }
 `;
 
-export const ServicesList = styled.ul`
-  padding-left: 10px;
-  margin-top: 10px;
-  width: 50%;
-
-  & > li:not(:last-child) {
-    margin-bottom: 10px;
-  }
-`;
-
-export const SubList = styled.ul`
-  padding-left: 10px;
-  margin-top: 10px;
-
-  & > li:not(:last-child) {
-    margin-bottom: 10px;
-  }
-`;
-
 export const NavigationLink = styled(Link)`
   display: flex;
   justify-content: space-between;
@@ -93,4 +74,14 @@ export const ServiceLink = styled(Link)`
   justify-content: space-between;
   width: 100%;
   font-weight: 600;
+`;
+
+export const List = styled.ul`
+  padding-left: 10px;
+  margin-top: 10px;
+  width: 50%;
+
+  & > li:not(:last-child) {
+    margin-bottom: 10px;
+  }
 `;
