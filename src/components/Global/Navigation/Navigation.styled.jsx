@@ -20,11 +20,6 @@ export const NavigationListItem = styled.li`
   padding: 19px 0 25px;
 `;
 
-export const CaretDownIcon = styled.span`
-  margin-left: 10px;
-  rotate: ${props => (props.isOpen ? '180deg' : 0)};
-`;
-
 export const NavigationLink = styled(Link)`
   font-size: 14px;
   padding: 19px 13px 25px;
@@ -65,6 +60,7 @@ export const CategoriesListWrapper = styled.div`
 
 export const ServiceTitle = styled.h3`
   margin-bottom: 30px;
+  text-transform: uppercase;
 `;
 
 export const ServicesList = styled.ul`

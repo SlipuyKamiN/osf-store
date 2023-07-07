@@ -3,6 +3,7 @@ import { colors } from 'styles/vars';
 
 export const PageHeader = styled.header`
   position: fixed;
+  z-index: 1;
   width: 100%;
   height: 60px;
   top: 0;
@@ -23,6 +24,7 @@ export const HeaderWrapper = styled.div`
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
+  background-color: ${colors.primaryWhite};
 
   @media screen and (min-width: 1280px) {
     width: 1280px;

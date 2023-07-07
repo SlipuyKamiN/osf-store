@@ -15,8 +15,9 @@ import {
 } from './NavigationMobile.styled';
 import { services } from 'data/services';
 import { useState } from 'react';
-import { CaretDownIcon, Img } from '../Navigation/Navigation.styled';
+import { Img } from '../Navigation/Navigation.styled';
 import { Link } from 'react-router-dom';
+import CaretDownIcon from '../CaretDownIcon';
 
 const NavigationMobile = () => {
   const [isNavigationOpen, setIsNavigationOpen] = useState(false);
@@ -55,10 +56,7 @@ const NavigationMobile = () => {
                 }}
               >
                 Services
-                <CaretDownIcon
-                  className="icon-caret-down"
-                  isOpen={isServicesListOpen}
-                />
+                <CaretDownIcon isOpen={isServicesListOpen} />
               </NavigationLink>
               {isServicesListOpen && (
                 <ServicesList>
@@ -69,10 +67,7 @@ const NavigationMobile = () => {
                       }}
                     >
                       Product categories
-                      <CaretDownIcon
-                        className="icon-caret-down"
-                        isOpen={isCategoriesListOpen}
-                      />
+                      <CaretDownIcon isOpen={isCategoriesListOpen} />
                     </ServiceLink>
                     {isCategoriesListOpen && (
                       <SubList>
@@ -91,10 +86,7 @@ const NavigationMobile = () => {
                       }}
                     >
                       Sale
-                      <CaretDownIcon
-                        className="icon-caret-down"
-                        isOpen={isSaleListOpen}
-                      />
+                      <CaretDownIcon isOpen={isSaleListOpen} />
                     </ServiceLink>
                     <SubList>
                       {isSaleListOpen &&
@@ -111,19 +103,19 @@ const NavigationMobile = () => {
             <li>
               <NavigationLink>
                 Company
-                <CaretDownIcon className="icon-caret-down" />
+                <CaretDownIcon />
               </NavigationLink>
             </li>
             <li>
               <NavigationLink>
                 Library
-                <CaretDownIcon className="icon-caret-down" />
+                <CaretDownIcon />
               </NavigationLink>
             </li>
             <li>
               <NavigationLink>
                 Contact us
-                <CaretDownIcon className="icon-caret-down" />
+                <CaretDownIcon />
               </NavigationLink>
             </li>
           </NavigationList>

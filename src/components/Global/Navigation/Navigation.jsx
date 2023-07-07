@@ -1,6 +1,5 @@
 import { services } from 'data/services';
 import {
-  CaretDownIcon,
   CategoriesListWrapper,
   Img,
   Nav,
@@ -15,6 +14,7 @@ import { Link } from 'react-router-dom';
 import navImage from 'images/nav-image.jpeg';
 import navImage2x from 'images/nav-image@2x.jpg';
 import { useState } from 'react';
+import CaretDownIcon from '../CaretDownIcon';
 
 const Navigation = () => {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
@@ -30,7 +30,7 @@ const Navigation = () => {
             className={isServicesOpen ? 'active' : ''}
           >
             Services
-            <CaretDownIcon className="icon-caret-down" />
+            <CaretDownIcon isOpen={isServicesOpen} />
           </NavigationLink>
         </NavigationListItem>
         <NavigationListItem>
