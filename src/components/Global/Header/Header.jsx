@@ -34,7 +34,7 @@ const Header = () => {
         </PageLogoWrapper>
         <Navigation />
         <SelectorsList />
-        <UserBar favouriteQuantity={8} inCartQuantity={3} />
+        <UserBar />
       </HeaderWrapper>
     </PageHeader>
   );

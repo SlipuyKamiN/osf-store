@@ -55,12 +55,3 @@ export const LowerLogoText = styled.p`
   font-size: 18px;
   color: ${colors.accentGreen};
 `;
-
-export const IconsList = styled.ul`
-  display: flex;
-  align-items: center;
-  margin-left: 62px;
-  @media screen and (max-width: 1280px) {
-    display: none;
-  }
-`;

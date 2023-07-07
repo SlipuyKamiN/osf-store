@@ -1,9 +1,11 @@
-import { IconsList } from './Header.styled';
-import { IconCounter, IconLink } from './UserBar.styled';
+import { IconsList, IconCounter, IconLink } from './UserBar.styled';
 
-const UserBar = ({ favouriteQuantity, inCartQuantity }) => {
+const UserBar = ({ mobile = false }) => {
+  const favouriteQuantity = 8;
+  const inCartQuantity = 3;
+
   return (
-    <IconsList>
+    <IconsList className={mobile && 'mobile'}>
       <li>
         <IconLink to="search" className="icon-search" />
       </li>
