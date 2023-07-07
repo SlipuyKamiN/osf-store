@@ -1,5 +1,7 @@
+import CarouselBanner from 'components/Homepage/CarouselBanner/CarouselBanner';
+
 const Home = () => {
-  return <div>Home</div>;
+  return <CarouselBanner />;
 };
 
 export default Home;

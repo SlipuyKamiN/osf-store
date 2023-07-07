@@ -42,22 +42,22 @@ const NavigationMobile = () => {
       {isNavigationOpen && (
         <MobileNavigationWrapper>
           <NavigationList>
-            <li>
+            <li key="Services">
               <ServicesSubList />
             </li>
-            <li>
+            <li key="Company">
               <NavigationLink>
                 Company
                 <CaretDownIcon />
               </NavigationLink>
             </li>
-            <li>
+            <li key="Library">
               <NavigationLink>
                 Library
                 <CaretDownIcon />
               </NavigationLink>
             </li>
-            <li>
+            <li key="Contact us">
               <NavigationLink>
                 Contact us
                 <CaretDownIcon />

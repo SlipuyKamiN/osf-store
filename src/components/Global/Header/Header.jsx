@@ -21,10 +21,10 @@ const Header = () => {
         <PageLogoWrapper href="/osf-store">
           <img
             srcSet={`${pageLogo} 63w, ${pageLogo2x} 126w`}
-            sizes="65px"
+            sizes="63px"
             src={pageLogo}
             width={63}
-            height={65}
+            height={63}
             alt="page logo"
           />
           <div>

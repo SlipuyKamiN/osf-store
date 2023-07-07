@@ -12,7 +12,7 @@ export const IconsList = styled.ul`
 
   &.mobile {
     position: fixed;
-    z-index: 2;
+    z-index: 9;
     bottom: 0;
     left: 0;
     width: 100%;
