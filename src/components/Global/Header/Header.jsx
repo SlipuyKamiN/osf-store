@@ -3,6 +3,7 @@ import {
   PageLogoWrapper,
   UpperLogoText,
   LowerLogoText,
+  HeaderWrapper,
 } from './Header.styled';
 import pageLogo from 'images/page-logo.jpeg';
 import pageLogo2x from 'images/page-logo@2x.jpeg';
@@ -15,24 +16,26 @@ import UserBar from './UserBar';
 const Header = () => {
   return (
     <PageHeader>
-      <NavigationMobile />
-      <PageLogoWrapper href="/osf-store">
-        <img
-          srcSet={`${pageLogo} 63w, ${pageLogo2x} 126w`}
-          sizes="65px"
-          src={pageLogo}
-          width={63}
-          height={65}
-          alt="page logo"
-        />
-        <div>
-          <UpperLogoText>OSF</UpperLogoText>
-          <LowerLogoText>Academy</LowerLogoText>
-        </div>
-      </PageLogoWrapper>
-      <Navigation />
-      <SelectorsList />
-      <UserBar favouriteQuantity={8} inCartQuantity={3} />
+      <HeaderWrapper>
+        <NavigationMobile />
+        <PageLogoWrapper href="/osf-store">
+          <img
+            srcSet={`${pageLogo} 63w, ${pageLogo2x} 126w`}
+            sizes="65px"
+            src={pageLogo}
+            width={63}
+            height={65}
+            alt="page logo"
+          />
+          <div>
+            <UpperLogoText>OSF</UpperLogoText>
+            <LowerLogoText>Academy</LowerLogoText>
+          </div>
+        </PageLogoWrapper>
+        <Navigation />
+        <SelectorsList />
+        <UserBar favouriteQuantity={8} inCartQuantity={3} />
+      </HeaderWrapper>
     </PageHeader>
   );
 };

@@ -33,7 +33,7 @@ export const MobileNavigationWrapper = styled.div`
   position: absolute;
 
   top: 60px;
-  left: -16px;
+  left: -0;
   width: 100vw;
   padding: 16px;
 

@@ -48,7 +48,7 @@ export const ServicesWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   top: 78px;
-  left: -55px;
+  left: 0;
   width: 1280px;
   height: 383px;
 
