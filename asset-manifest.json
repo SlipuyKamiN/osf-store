@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/osf-store/static/css/main.af07f8ff.css",
-    "main.js": "/osf-store/static/js/main.0114d4d3.js",
+    "main.js": "/osf-store/static/js/main.d8787f7c.js",
     "static/media/nav-image@2x.jpg": "/osf-store/static/media/nav-image@2x.d3b7ac9dedd8cd2538fe.jpg",
     "static/media/nav-image.jpeg": "/osf-store/static/media/nav-image.63726d5c0b3f15726bdc.jpeg",
     "static/media/page-logo@2x.jpeg": "/osf-store/static/media/page-logo@2x.c22cf00eff17bdea03d1.jpeg",
@@ -12,10 +12,10 @@
     "static/media/icomoon.ttf?dcjp32": "/osf-store/static/media/icomoon.44698020ee8839cbabc0.ttf",
     "index.html": "/osf-store/index.html",
     "main.af07f8ff.css.map": "/osf-store/static/css/main.af07f8ff.css.map",
-    "main.0114d4d3.js.map": "/osf-store/static/js/main.0114d4d3.js.map"
+    "main.d8787f7c.js.map": "/osf-store/static/js/main.d8787f7c.js.map"
   },
   "entrypoints": [
     "static/css/main.af07f8ff.css",
-    "static/js/main.0114d4d3.js"
+    "static/js/main.d8787f7c.js"
   ]
 }
