@@ -1,0 +1,29 @@
+.swiper {
+  overflow-y: visible;
+}
+
+.swiper .swiper-button-next {
+  top: -29px;
+  right: 280px;
+  width: 30px;
+  height: 30px;
+  color: #ffffff;
+  background-color: #2d343a;
+
+  &::after {
+    font-size: 12px;
+  }
+}
+
+.swiper .swiper-button-prev {
+  top: -29px;
+  left: 280px;
+  width: 30px;
+  height: 30px;
+  color: #ffffff;
+  background-color: #2d343a;
+
+  &::after {
+    font-size: 12px;
+  }
+}

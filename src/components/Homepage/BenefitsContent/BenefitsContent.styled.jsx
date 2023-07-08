@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { colors } from 'styles/vars';
+import { colors } from 'styles/common/vars';
 import { SectionTitle } from '../PopularItems/PopularItems.styled';
 
 export const BenefitsSection = styled.section`

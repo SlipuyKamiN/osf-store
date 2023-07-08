@@ -1,7 +1,8 @@
 @import-normalize;
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
 @import '~react-image-gallery/styles/scss/image-gallery.scss';
-@import './styles/base';
-@import './styles/icons';
-@import './styles/image-gallery';
-@import './styles/popular-items-gallery';
+@import './styles/common/base';
+@import './styles/common/icons';
+@import './styles/libraries/image-gallery';
+@import './styles/libraries/popular-items-gallery';
+@import './styles/libraries/featured-swiper';

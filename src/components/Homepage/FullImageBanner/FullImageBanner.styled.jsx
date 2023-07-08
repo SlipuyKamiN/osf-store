@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import bgImagePath from 'images/banner.jpg';
-import { colors } from 'styles/vars';
+import { colors } from 'styles/common/vars';
 
 export const BannerSection = styled.section`
   width: 100%;

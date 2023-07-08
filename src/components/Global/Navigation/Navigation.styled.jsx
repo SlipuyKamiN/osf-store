@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
-import { colors, transition } from 'styles/vars';
+import { colors, transition } from 'styles/common/vars';
 
 export const Nav = styled.nav`
   margin-left: 179px;

@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
-import { colors } from 'styles/vars';
+import { colors } from 'styles/common/vars';
 
 export const FooterWrapper = styled.footer`
   display: flex;

@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { colors, transition } from 'styles/vars';
+import { colors, transition } from 'styles/common/vars';
 
 export const SalesCard = styled.div`
   display: none;
