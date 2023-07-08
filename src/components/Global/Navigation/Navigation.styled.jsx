@@ -72,7 +72,7 @@ export const ServicesList = styled.ul`
   row-gap: 14px;
 `;
 
-export const ServicesLink = styled(Link)`
+export const ListLink = styled(Link)`
   &:hover,
   &:focus {
     color: ${colors.accentGreen};

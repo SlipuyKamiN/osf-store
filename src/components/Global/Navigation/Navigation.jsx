@@ -2,12 +2,12 @@ import { services } from 'data/services';
 import {
   CategoriesListWrapper,
   Img,
+  ListLink,
   Nav,
   NavigationLink,
   NavigationList,
   NavigationListItem,
   ServiceTitle,
-  ServicesLink,
   ServicesList,
   ServicesWrapper,
 } from './Navigation.styled';
@@ -50,7 +50,7 @@ const Navigation = () => {
             <ServicesList>
               {services.productCategories.map(item => (
                 <li key={item}>
-                  <ServicesLink to={item}>{item}</ServicesLink>
+                  <ListLink to={item}>{item}</ListLink>
                 </li>
               ))}
             </ServicesList>
@@ -60,7 +60,7 @@ const Navigation = () => {
             <ServicesList>
               {services.sale.map(item => (
                 <li key={item}>
-                  <ServicesLink to={item}>{item}</ServicesLink>
+                  <ListLink to={item}>{item}</ListLink>
                 </li>
               ))}
             </ServicesList>

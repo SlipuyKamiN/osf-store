@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { List, ServiceLink } from './SubList.styled';
 import CaretDownIcon from '../CaretDownIcon';
-import { Link } from 'react-router-dom';
+import { ListLink } from '../Navigation/Navigation.styled';
 
 const SubList = ({ title, listContent }) => {
   const [isListOpen, setIsListOpen] = useState(false);
@@ -20,7 +20,7 @@ const SubList = ({ title, listContent }) => {
         <List>
           {listContent.map(item => (
             <li key={item}>
-              <Link to={item}>{item}</Link>
+              <ListLink to={item}>{item}</ListLink>
             </li>
           ))}
         </List>
