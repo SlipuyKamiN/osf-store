@@ -51,7 +51,7 @@ export const ItemDescExtended = styled(ItemDescription)`
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: RGBA(35, 196, 110, 0.7);
+    background-color: RGBA(35, 196, 110, 0.8);
     opacity: 0;
 
     transform: translateY(-100%);

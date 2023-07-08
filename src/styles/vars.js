@@ -8,6 +8,7 @@ export const colors = {
   darkBlue: '#2d343a',
   primaryWhite: '#ffffff',
   priceColor: '#011847',
+  benefitsText: '#868380',
 };
 
 export const transition = {
