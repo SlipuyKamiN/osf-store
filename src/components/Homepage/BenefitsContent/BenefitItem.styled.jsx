@@ -24,6 +24,10 @@ export const Benefit = styled.li`
       margin-bottom: 0;
       flex-direction: row;
     }
+
+    div {
+      align-self: flex-start;
+    }
   }
 `;
 
