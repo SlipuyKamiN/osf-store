@@ -1,5 +1,5 @@
 import CarouselBanner from 'components/Homepage/CarouselBanner/CarouselBanner';
-import PopularItems from 'components/Homepage/PopularItems';
+import PopularItems from 'components/Homepage/PopularItems/PopularItems';
 
 const Home = () => {
   return (

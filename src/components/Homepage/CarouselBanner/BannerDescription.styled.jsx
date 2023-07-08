@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 export const BannerSection = styled.section`
   display: flex;
   gap: 30px;
+  padding-top: 28px;
+  padding-bottom: 28px;
 `;
 
 export const Banner = styled.div`

@@ -59,3 +59,12 @@ html {
 button {
   cursor: pointer;
 }
+
+section,
+footer {
+  padding: 0 16px;
+
+  @media screen and (min-width: 1280px) {
+    padding: 0 55px;
+  }
+}

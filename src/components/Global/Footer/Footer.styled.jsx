@@ -7,7 +7,8 @@ export const FooterWrapper = styled.footer`
   flex-direction: column;
   gap: 24px;
   width: 100%;
-  padding: 24px 0 67px;
+  padding-top: 24px;
+  padding-bottom: 67px;
 
   color: ${colors.fontGray};
   background-color: ${colors.primaryWhite};
@@ -16,7 +17,8 @@ export const FooterWrapper = styled.footer`
 
   @media screen and (min-width: 1280px) {
     height: 345px;
-    padding: 39px 0;
+    padding-top: 39px;
+    padding-bottom: 39px;
     flex-direction: row;
     justify-content: space-between;
   }

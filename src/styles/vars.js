@@ -7,6 +7,7 @@ export const colors = {
   fontGray: '#45413E',
   darkBlue: '#2d343a',
   primaryWhite: '#ffffff',
+  priceColor: '#011847',
 };
 
 export const transition = {

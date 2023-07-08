@@ -5,7 +5,7 @@ export const Container = styled.div`
   outline: 1px solid tomato;
   margin: 0 auto;
   width: 100%;
-  padding: 60px 16px 0;
+  padding: 60px 0 0;
 
   @media screen and (min-width: 768px) {
     width: 768px;
@@ -13,6 +13,6 @@ export const Container = styled.div`
 
   @media screen and (min-width: 1280px) {
     width: 1280px;
-    padding: 78px 55px 0;
+    padding: 78px 0 0;
   }
 `;
