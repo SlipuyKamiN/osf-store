@@ -1,7 +1,8 @@
 {
   "files": {
     "main.css": "/osf-store/static/css/main.c7c03099.css",
-    "main.js": "/osf-store/static/js/main.6d12f39a.js",
+    "main.js": "/osf-store/static/js/main.47dbc231.js",
+    "static/media/banner.jpg": "/osf-store/static/media/banner.69c9f1677a789b9913e2.jpg",
     "static/media/carousel-1.png": "/osf-store/static/media/carousel-1.e91379b4306ea58ef40b.png",
     "static/media/page-logo@2x.jpeg": "/osf-store/static/media/page-logo@2x.9afeccc595b7d0c50da2.jpeg",
     "static/media/carousel-3.jpg": "/osf-store/static/media/carousel-3.943796a9a8346091e88c.jpg",
@@ -28,10 +29,10 @@
     "static/media/comment.svg": "/osf-store/static/media/comment.97a5f8932e30029b221811190ca6d207.svg",
     "index.html": "/osf-store/index.html",
     "main.c7c03099.css.map": "/osf-store/static/css/main.c7c03099.css.map",
-    "main.6d12f39a.js.map": "/osf-store/static/js/main.6d12f39a.js.map"
+    "main.47dbc231.js.map": "/osf-store/static/js/main.47dbc231.js.map"
   },
   "entrypoints": [
     "static/css/main.c7c03099.css",
-    "static/js/main.6d12f39a.js"
+    "static/js/main.47dbc231.js"
   ]
 }
