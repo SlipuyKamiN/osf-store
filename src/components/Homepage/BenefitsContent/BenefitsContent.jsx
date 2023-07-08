@@ -1,10 +1,11 @@
 import { benefits } from 'data/benefits';
 import BenefitItem from './BenefitItem';
-import { BenefitsSection, List } from './BenefitsContent.styled';
+import { BenefitsSection, HiddenTitle, List } from './BenefitsContent.styled';
 
 const BenefitsContent = () => {
   return (
     <BenefitsSection>
+      <HiddenTitle>Benefits</HiddenTitle>
       <List>
         {benefits.map(benefit => (
           <BenefitItem benefit={benefit} key={benefit.title} />

@@ -23,7 +23,6 @@ export const SectionTitle = styled.h2`
   font-size: 16px;
 
   color: ${colors.primaryWhite};
-  background-color: ${colors.primaryBg};
 
   @media screen and (min-width: 1280px) {
     font-size: 24px;
