@@ -14,7 +14,7 @@ export const SalesCard = styled.div`
 export const ImageWrapper = styled.div`
   position: relative;
   width: 100%;
-  margin-bottom: 42px;
+  margin-bottom: 38px;
 `;
 
 export const ImageTextWrapper = styled.div`

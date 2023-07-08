@@ -1,12 +1,9 @@
 import styled from '@emotion/styled';
 import { colors } from 'styles/common/vars';
+import { BasicCard } from './BasicTile.styled';
 
-export const CommentCard = styled.li`
-  position: relative;
-  width: 270px;
-  height: 368px;
-  border-radius: 6px;
-  overflow: hidden;
+export const CommentCard = styled(BasicCard)`
+  text-align: left;
 
   background-image: linear-gradient(
       0deg,

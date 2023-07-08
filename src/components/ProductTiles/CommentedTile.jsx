@@ -1,14 +1,14 @@
+import commentIcon from 'images/comment.svg';
 import {
   CommentCard,
-  CommentText,
   CommentDate,
+  CommentText,
   CommentWrapper,
-} from './CommentItem.styled';
-import commentIcon from 'images/comment.svg';
+} from './CommentedTile.styled';
 
-const CommentItem = ({ original, comment }) => {
+const CommentedTile = ({ imageUrl, comment }) => {
   return (
-    <CommentCard imageUrl={original}>
+    <CommentCard imageUrl={imageUrl}>
       <CommentWrapper>
         <CommentText>{comment.text}</CommentText>
         <CommentDate>
@@ -20,4 +20,4 @@ const CommentItem = ({ original, comment }) => {
   );
 };
 
-export default CommentItem;
+export default CommentedTile;

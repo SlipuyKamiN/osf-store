@@ -2,12 +2,17 @@ import styled from '@emotion/styled';
 import { colors } from 'styles/common/vars';
 
 export const FeaturedSection = styled.section`
+  display: none;
   padding-top: 46px;
   padding-bottom: 64px;
 
   color: ${colors.primaryWhite};
   background-color: ${colors.primaryBg};
   text-align: center;
+
+  @media screen and (min-width: 1280px) {
+    display: block;
+  }
 `;
 export const SectionTitle = styled.h2`
   font-size: 36px;
