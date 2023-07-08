@@ -1,4 +1,4 @@
-import { popularItems, popularItemsMobile } from 'data/sliderItems';
+import { popularItemsMobile } from 'data/sliderItems';
 import ImageGallery from 'react-image-gallery';
 import { PopularItemsSection, SectionTitle } from './PopularItems.styled';
 import useWindowDimensions from 'hooks/useWindowDimensions';

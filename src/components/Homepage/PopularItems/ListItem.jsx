@@ -1,18 +1,23 @@
-import { Link } from 'react-router-dom';
+import CommentItem from './CommentItem';
 import {
   AddButton,
   BuyNowButton,
   BuyNowLink,
   BuyNowPrice,
   BuyNowWrapper,
-  HoverableWrapper,
   Image,
   ItemCard,
   ItemDescExtended,
   ItemDescription,
 } from './ListItem.styled';
 
-const ListItem = ({ item: { original, title, price, buyNow = false } }) => {
+const ListItem = ({
+  item: { original, title, price, buyNow = false, comment = null },
+}) => {
+  if (comment) {
+    return <CommentItem original={original} comment={comment} />;
+  }
+
   return (
     <ItemCard>
       <Image src={original} alt={title} width="270px" />

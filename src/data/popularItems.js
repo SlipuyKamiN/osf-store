@@ -10,12 +10,12 @@ export const popularItems = [
 
     title: 'EAMES x Cast + Crew - Custom Powder Coated',
     price: 879,
+    buyNow: true,
   },
   {
     original: require('images/item3.png'),
     title: 'Activate Facial Mask and Charcoal Soap',
     price: 667,
-    buyNow: true,
   },
   {
     original: require('images/item4.png'),
@@ -32,6 +32,7 @@ export const popularItems = [
     original: require('images/item6.png'),
     title: 'TORY DESK CALENDAR',
     price: 78,
+    buyNow: true,
   },
   {
     original: require('images/item7.png'),
@@ -39,10 +40,13 @@ export const popularItems = [
     price: 78,
   },
   {
-    original: require('images/item8.png'),
+    original: require('images/item11.png'),
     title: 'CH445 Wing Chair on SUITE NY',
     price: 1280,
-    buyNow: true,
+    comment: {
+      text: 'My dragons are misbehaving again. Unbelieveable!',
+      hoursAgo: 5,
+    },
   },
   {
     original: require('images/item9.png'),
@@ -56,7 +60,7 @@ export const popularItems = [
     price: 2148,
   },
   {
-    original: require('images/item11.png'),
+    original: require('images/item8.png'),
 
     title: 'Vitra Cork Stool B, Cork - Design Within Reach',
     price: 636,

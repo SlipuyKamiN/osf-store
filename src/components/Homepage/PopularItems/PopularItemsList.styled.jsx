@@ -4,7 +4,7 @@ import { colors, transition } from 'styles/vars';
 export const ItemsList = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  align-items: baseline;
+  align-items: center;
   justify-content: center;
   gap: 27px;
 `;
