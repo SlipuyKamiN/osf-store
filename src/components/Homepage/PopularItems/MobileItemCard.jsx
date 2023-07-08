@@ -3,17 +3,17 @@ const {
   DetailsWrapper,
   CardTitle,
   CardPrice,
-} = require('./ItemCard.styled');
+} = require('./MobileItemCard.styled');
 
-const ItemCard = ({ title, price }) => {
+const MobileItemCard = ({ title, price }) => {
   return (
     <CardWrapper>
       <DetailsWrapper>
         <CardTitle>{title}</CardTitle>
-        <CardPrice>${price}</CardPrice>
+        <CardPrice>$ {price}</CardPrice>
       </DetailsWrapper>
     </CardWrapper>
   );
 };
 
-export default ItemCard;
+export default MobileItemCard;

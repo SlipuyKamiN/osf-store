@@ -5,6 +5,11 @@ export const PopularItemsSection = styled.section`
   padding-top: 32px;
   padding-bottom: 64px;
   background-color: ${colors.primaryBg};
+
+  @media screen and (min-width: 1280px) {
+    padding-top: 81px;
+    padding-bottom: 59px;
+  }
 `;
 
 export const SectionTitle = styled.h2`

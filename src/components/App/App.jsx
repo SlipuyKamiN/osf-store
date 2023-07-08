@@ -16,10 +16,7 @@ export const App = () => {
           path="category-landing/:categoryName"
           element={<CategoryLanding />}
         ></Route>
-        <Route
-          path="product-detailed/:productId"
-          element={<ProductDetailed />}
-        ></Route>
+        <Route path="product-detailed" element={<ProductDetailed />}></Route>
         <Route path="*" element={<ErrorPage />}></Route>
       </Route>
     </Routes>
