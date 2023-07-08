@@ -1,21 +1,25 @@
 import ImageGallery from 'react-image-gallery';
 import BannerDescription from './BannerDescription';
 import { BannerSection } from './BannerDescription.styled';
+import bannerLeft from 'images/carousel-1.png';
+import bannerCenter from 'images/carousel-2.jpg';
+import bannerRight from 'images/carousel-3.jpg';
+import SalesAd from './SalesAd';
 
 const images = [
   {
-    original: 'https://picsum.photos/id/1018/1000/600/',
-    thumbnail: 'https://picsum.photos/id/1018/250/150/',
+    original: bannerLeft,
+    thumbnail: bannerRight,
     description: <BannerDescription contentAlign={'left'} />,
   },
   {
-    original: 'https://picsum.photos/id/1015/1000/600/',
-    thumbnail: 'https://picsum.photos/id/1015/250/150/',
+    original: bannerCenter,
+    thumbnail: bannerCenter,
     description: <BannerDescription contentAlign={'center'} />,
   },
   {
-    original: 'https://picsum.photos/id/1019/1000/600/',
-    thumbnail: 'https://picsum.photos/id/1019/250/150/',
+    original: bannerRight,
+    thumbnail: bannerRight,
     description: <BannerDescription contentAlign={'right'} />,
   },
 ];
@@ -33,6 +37,7 @@ const CarouselBanner = () => {
         showPlayButton={false}
         showBullets={true}
       />
+      <SalesAd />
     </BannerSection>
   );
 };
