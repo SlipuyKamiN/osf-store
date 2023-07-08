@@ -1,21 +1,37 @@
 {
   "files": {
-    "main.css": "/osf-store/static/css/main.7445d69e.css",
-    "main.js": "/osf-store/static/js/main.4f891732.js",
+    "main.css": "/osf-store/static/css/main.c7c03099.css",
+    "main.js": "/osf-store/static/js/main.6d12f39a.js",
+    "static/media/carousel-1.png": "/osf-store/static/media/carousel-1.e91379b4306ea58ef40b.png",
+    "static/media/page-logo@2x.jpeg": "/osf-store/static/media/page-logo@2x.9afeccc595b7d0c50da2.jpeg",
+    "static/media/carousel-3.jpg": "/osf-store/static/media/carousel-3.943796a9a8346091e88c.jpg",
+    "static/media/carousel-2.jpg": "/osf-store/static/media/carousel-2.2fd22ad1cbee6561af5a.jpg",
+    "static/media/item8.png": "/osf-store/static/media/item8.8d42db0e1eb403fedfd2.png",
     "static/media/nav-image@2x.jpg": "/osf-store/static/media/nav-image@2x.d3b7ac9dedd8cd2538fe.jpg",
     "static/media/nav-image.jpeg": "/osf-store/static/media/nav-image.63726d5c0b3f15726bdc.jpeg",
-    "static/media/page-logo@2x.jpeg": "/osf-store/static/media/page-logo@2x.c22cf00eff17bdea03d1.jpeg",
-    "static/media/icomoon.svg?dcjp32": "/osf-store/static/media/icomoon.33b21d3d4aaa908d0938.svg",
+    "static/media/item9.png": "/osf-store/static/media/item9.8c962226a9d8a7ea10b9.png",
+    "static/media/item7.png": "/osf-store/static/media/item7.5fc17b4520e95f923b45.png",
+    "static/media/item10.png": "/osf-store/static/media/item10.927d2b6d782323b5beed.png",
+    "static/media/item1.png": "/osf-store/static/media/item1.94abac0f1e1d7b648f67.png",
+    "static/media/item3.png": "/osf-store/static/media/item3.885cf5d23c7b45e6a9a3.png",
+    "static/media/item4.png": "/osf-store/static/media/item4.e71e9a40cd8c44e5b3a8.png",
+    "static/media/item6.png": "/osf-store/static/media/item6.53522d8b1ea3c2730c9f.png",
+    "static/media/item11.png": "/osf-store/static/media/item11.002b0b95880ccf83356f.png",
+    "static/media/item12.png": "/osf-store/static/media/item12.990f50d7c775dd175bfb.png",
+    "static/media/item2.png": "/osf-store/static/media/item2.d5a360521d0987c78909.png",
+    "static/media/item5.png": "/osf-store/static/media/item5.808aac7bfbf450ff2173.png",
+    "static/media/icomoon.svg?fh48qp": "/osf-store/static/media/icomoon.055128879e7183373ffc.svg",
     "static/media/page-logo.jpeg": "/osf-store/static/media/page-logo.d405ee733bf978fdde36.jpeg",
-    "static/media/icomoon.eot?dcjp32": "/osf-store/static/media/icomoon.3e887d2880bb7e844485.eot",
-    "static/media/icomoon.woff?dcjp32": "/osf-store/static/media/icomoon.ca8069e656ff10059618.woff",
-    "static/media/icomoon.ttf?dcjp32": "/osf-store/static/media/icomoon.44698020ee8839cbabc0.ttf",
+    "static/media/icomoon.eot?fh48qp": "/osf-store/static/media/icomoon.a66641aef4eefb62ed77.eot",
+    "static/media/icomoon.woff?fh48qp": "/osf-store/static/media/icomoon.b3844125e800dae2d674.woff",
+    "static/media/icomoon.ttf?fh48qp": "/osf-store/static/media/icomoon.fbeddc3f422c688892a4.ttf",
+    "static/media/comment.svg": "/osf-store/static/media/comment.97a5f8932e30029b221811190ca6d207.svg",
     "index.html": "/osf-store/index.html",
-    "main.7445d69e.css.map": "/osf-store/static/css/main.7445d69e.css.map",
-    "main.4f891732.js.map": "/osf-store/static/js/main.4f891732.js.map"
+    "main.c7c03099.css.map": "/osf-store/static/css/main.c7c03099.css.map",
+    "main.6d12f39a.js.map": "/osf-store/static/js/main.6d12f39a.js.map"
   },
   "entrypoints": [
-    "static/css/main.7445d69e.css",
-    "static/js/main.4f891732.js"
+    "static/css/main.c7c03099.css",
+    "static/js/main.6d12f39a.js"
   ]
 }
