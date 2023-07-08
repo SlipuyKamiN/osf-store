@@ -32,11 +32,11 @@ export const popularItems = [
     original: require('images/item6.png'),
     title: 'TORY DESK CALENDAR',
     price: 78,
-    buyNow: true,
   },
   {
     original: require('images/item7.png'),
     title: 'TORY Wing Chair on SUITE',
+    buyNow: true,
     price: 78,
   },
   {
@@ -51,11 +51,11 @@ export const popularItems = [
   {
     original: require('images/item9.png'),
     title: 'CH445 Wing Chair on SUITE NY',
+    buyNow: true,
     price: 110,
   },
   {
     original: require('images/item10.png'),
-
     title: 'Kristina Dam Oak Table With White Marble Top',
     price: 2148,
   },
