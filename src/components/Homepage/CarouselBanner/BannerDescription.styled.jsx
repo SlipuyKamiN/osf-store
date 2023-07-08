@@ -4,8 +4,6 @@ import { Link } from 'react-router-dom';
 export const BannerSection = styled.section`
   display: flex;
   gap: 30px;
-  border-radius: 6px;
-  overflow: hidden;
 `;
 
 export const Banner = styled.div`
