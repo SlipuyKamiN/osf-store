@@ -1,9 +1,14 @@
-import { BasicCard, BasicTitle, Image } from './BasicTile.styled';
-import { AddButton, Price, PricedDescription } from './PricedTile.styled';
+import { BasicTitle, Image } from './BasicTile.styled';
+import {
+  AddButton,
+  Price,
+  PricedCard,
+  PricedDescription,
+} from './PricedTile.styled';
 
 const PricedTile = ({ item: { imageUrl, title, price } }) => {
   return (
-    <BasicCard>
+    <PricedCard>
       <Image src={imageUrl} alt={title} width="270px" />
       <PricedDescription>
         <BasicTitle>{title}</BasicTitle>
@@ -17,7 +22,7 @@ const PricedTile = ({ item: { imageUrl, title, price } }) => {
           </li>
         </ul>
       </PricedDescription>
-    </BasicCard>
+    </PricedCard>
   );
 };
 

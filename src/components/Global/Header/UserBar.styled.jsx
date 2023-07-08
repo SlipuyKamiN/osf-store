@@ -43,7 +43,7 @@ export const IconLink = styled(Link)`
   position: relative;
   display: block;
   font-size: 24px;
-  padding: 15px 12px;
+  padding: 19px 12px;
   border-bottom: 3px solid transparent;
   color: ${colors.fontGray};
   transition: background-color ${transition.duration},

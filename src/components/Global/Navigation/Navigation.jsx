@@ -7,10 +7,10 @@ import {
   NavigationList,
   NavigationListItem,
   ServiceTitle,
+  ServicesLink,
   ServicesList,
   ServicesWrapper,
 } from './Navigation.styled';
-import { Link } from 'react-router-dom';
 import navImage from 'images/nav-image.jpeg';
 import navImage2x from 'images/nav-image@2x.jpg';
 import { useState } from 'react';
@@ -50,7 +50,7 @@ const Navigation = () => {
             <ServicesList>
               {services.productCategories.map(item => (
                 <li key={item}>
-                  <Link to={item}>{item}</Link>
+                  <ServicesLink to={item}>{item}</ServicesLink>
                 </li>
               ))}
             </ServicesList>
@@ -60,7 +60,7 @@ const Navigation = () => {
             <ServicesList>
               {services.sale.map(item => (
                 <li key={item}>
-                  <Link to={item}>{item}</Link>
+                  <ServicesLink to={item}>{item}</ServicesLink>
                 </li>
               ))}
             </ServicesList>

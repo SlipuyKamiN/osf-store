@@ -23,7 +23,7 @@ export const BuyNowWrapper = styled.div`
   overflow: hidden;
 `;
 
-export const BuyNowPrice = styled.p`
+export const BuyNowPrice = styled(Link)`
   width: 50%;
   color: ${colors.accentGreen};
 `;
@@ -31,8 +31,11 @@ export const BuyNowPrice = styled.p`
 export const BuyNowButton = styled.button`
   height: 100%;
   width: 50%;
+  padding: 4px 0 0;
+
   text-align: center;
   background-color: transparent;
+
   border: none;
   border-left: 2px solid rgba(0, 0, 0, 0.1);
 

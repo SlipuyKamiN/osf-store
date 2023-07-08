@@ -23,7 +23,7 @@ const Header = () => {
             srcSet={`${pageLogo} 63w, ${pageLogo2x} 126w`}
             sizes="63px"
             src={pageLogo}
-            width={63}
+            width={62}
             height={63}
             alt="page logo"
           />

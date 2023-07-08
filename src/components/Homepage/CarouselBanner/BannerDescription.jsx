@@ -13,7 +13,7 @@ const BannerDescription = ({ contentAlign }) => {
         Improve business perfomance and the user experience with the right mix
         of IoT technology and processes
       </Description>
-      <ViewMoreLink>View more</ViewMoreLink>
+      <ViewMoreLink to={'category-landing'}>View more</ViewMoreLink>
     </Banner>
   );
 };

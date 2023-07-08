@@ -16,9 +16,6 @@ export const Image = styled.img`
 `;
 
 export const BasicDescription = styled.div`
-  position: absolute;
-  bottom: 0;
-  left: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

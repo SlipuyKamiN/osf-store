@@ -3,11 +3,11 @@ import { colors, transition } from 'styles/common/vars';
 
 export const SalesCard = styled.div`
   display: none;
+  width: 270px;
+  text-align: center;
 
   @media screen and (min-width: 1280px) {
     display: block;
-    width: 270px;
-    text-align: center;
   }
 `;
 
@@ -43,8 +43,9 @@ export const CardTitle = styled.h3`
 `;
 
 export const CardDescription = styled.p`
+  margin: 0 auto 31px;
+  max-width: 195px;
   font-size: 13px;
-  margin-bottom: 31px;
 `;
 
 export const CardFollowLink = styled.a`

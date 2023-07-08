@@ -32,7 +32,7 @@ const PopularItemsList = () => {
         ))}
       </ItemsList>
       {!isLastPage && (
-        <LoadMoreButton onClick={incrementPage}>
+        <LoadMoreButton type="button" onClick={incrementPage}>
           Load more
           <span className="icon-arrow"></span>
         </LoadMoreButton>

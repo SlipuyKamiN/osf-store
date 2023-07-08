@@ -2,28 +2,30 @@
   overflow-y: visible;
 }
 
-.swiper .swiper-button-next {
+.swiper .swiper-button-next,
+.swiper .swiper-button-prev {
   top: -29px;
-  right: 280px;
   width: 30px;
   height: 30px;
   color: #ffffff;
   background-color: #2d343a;
+  transition: color 250ms linear, background-color 250ms linear;
 
   &::after {
     font-size: 12px;
+  }
+
+  &:hover,
+  &:focus {
+    color: #84bc22;
+    background-color: #3a5b96;
   }
 }
 
-.swiper .swiper-button-prev {
-  top: -29px;
-  left: 280px;
-  width: 30px;
-  height: 30px;
-  color: #ffffff;
-  background-color: #2d343a;
+.swiper .swiper-button-next {
+  right: 280px;
+}
 
-  &::after {
-    font-size: 12px;
-  }
+.swiper .swiper-button-prev {
+  left: 280px;
 }

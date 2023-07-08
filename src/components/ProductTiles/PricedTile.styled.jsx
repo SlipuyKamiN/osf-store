@@ -37,7 +37,6 @@ export const PricedDescription = styled(BasicDescription)`
 
 export const AddButton = styled.button`
   display: block;
-  background-color: ${colors.primaryWhite};
   width: 93px;
   height: 93px;
   border-radius: 50%;
@@ -48,6 +47,14 @@ export const AddButton = styled.button`
 
   text-align: center;
   font-size: 31px;
+
+  background-color: ${colors.primaryWhite};
+
+  transition: opacity ${transition.duration};
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
 `;
 
 export const Price = styled.p`

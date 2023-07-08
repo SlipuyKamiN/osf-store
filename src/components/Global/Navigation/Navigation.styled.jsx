@@ -72,6 +72,13 @@ export const ServicesList = styled.ul`
   row-gap: 14px;
 `;
 
+export const ServicesLink = styled(Link)`
+  &:hover,
+  &:focus {
+    color: ${colors.accentGreen};
+  }
+`;
+
 export const Img = styled.img`
   border-radius: 6px;
 `;

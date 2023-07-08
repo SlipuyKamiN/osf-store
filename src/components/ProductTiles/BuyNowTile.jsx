@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { BasicCard, Image } from './BasicTile.styled';
 import {
   BuyNowButton,
@@ -10,12 +11,14 @@ import {
 const BuyNowTile = ({ item: { imageUrl, title, price } }) => {
   return (
     <BasicCard>
-      <Image src={imageUrl} alt={title} width="270px" />
+      <Link to="product-detailed">
+        <Image src={imageUrl} alt={title} width="270px" />
+      </Link>
       <BuyNowDescription>
         <BuyNowLink to="product-detailed">{title}</BuyNowLink>
         <BuyNowWrapper>
-          <BuyNowPrice>$ {price}</BuyNowPrice>
-          <BuyNowButton>Buy now</BuyNowButton>
+          <BuyNowPrice to="product-detailed">$ {price}</BuyNowPrice>
+          <BuyNowButton type="button">Buy now</BuyNowButton>
         </BuyNowWrapper>
       </BuyNowDescription>
     </BasicCard>
