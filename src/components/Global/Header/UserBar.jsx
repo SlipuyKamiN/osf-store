@@ -1,8 +1,8 @@
+import { useProducts } from 'context/ProductsContext';
 import { IconsList, IconCounter, IconLink } from './UserBar.styled';
 
 const UserBar = ({ mobile = false }) => {
-  const favouriteQuantity = 8;
-  const inCartQuantity = 3;
+  const { wishlist, cart } = useProducts();
 
   return (
     <IconsList className={mobile && 'mobile'}>
@@ -14,12 +14,12 @@ const UserBar = ({ mobile = false }) => {
       </li>
       <li>
         <IconLink to="favourite" className="icon-heart">
-          <IconCounter>{favouriteQuantity}</IconCounter>
+          <IconCounter>{wishlist.length}</IconCounter>
         </IconLink>
       </li>
       <li>
         <IconLink to="cart" className="icon-bag">
-          <IconCounter>{inCartQuantity}</IconCounter>
+          <IconCounter>{cart.length}</IconCounter>
         </IconLink>
       </li>
     </IconsList>

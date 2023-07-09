@@ -8,7 +8,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation, Autoplay } from 'swiper/modules';
-import { popularItems } from 'data/popularItems';
+import { productItems } from 'data/productItems';
 import BasicTile from 'components/ProductTiles/BasicTile';
 
 const FeaturedProducts = () => {
@@ -28,7 +28,7 @@ const FeaturedProducts = () => {
         autoplay={{ delay: 5000 }}
         rewind={true}
       >
-        {popularItems.map(item => (
+        {productItems.map(item => (
           <SwiperSlide key={item.title + item.price}>
             <BasicTile item={item} />
           </SwiperSlide>

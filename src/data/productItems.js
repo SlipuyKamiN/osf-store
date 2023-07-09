@@ -1,11 +1,13 @@
-export const popularItems = [
+export const productItems = [
   {
+    id: 'I11',
     imageUrl: require('images/item1.png'),
     title: 'Kristina Dam Oak Table With White Marble Top',
     label: 'awesome',
     price: 1237,
   },
   {
+    id: 'I00',
     imageUrl: require('images/item2.png'),
     title: 'EAMES x Cast + Crew - Custom Powder Coated',
     label: 'marketing',
@@ -13,30 +15,35 @@ export const popularItems = [
     buyNow: true,
   },
   {
+    id: 'I01',
     imageUrl: require('images/item3.png'),
     title: 'Activate Facial Mask and Charcoal Soap',
     label: 'awesome',
     price: 667,
   },
   {
+    id: 'I02',
     imageUrl: require('images/item4.png'),
     title: 'Vitra Cork Stool B, Cork - Design Within Reach',
     label: 'marketing',
     price: 26,
   },
   {
+    id: 'I03',
     imageUrl: require('images/item5.png'),
     title: 'Hay - About A Lounge Chair AAL 93',
     label: 'awesome',
     price: 543,
   },
   {
+    id: 'I04',
     imageUrl: require('images/item6.png'),
     title: 'TORY DESK CALENDAR',
     label: 'marketing',
     price: 78,
   },
   {
+    id: 'I05',
     imageUrl: require('images/item7.png'),
     title: 'TORY Wing Chair on SUITE',
     buyNow: true,
@@ -44,6 +51,7 @@ export const popularItems = [
     price: 78,
   },
   {
+    id: 'I06',
     imageUrl: require('images/item11.png'),
     title: 'CH445 Wing Chair on SUITE NY',
     label: 'awesome',
@@ -54,6 +62,7 @@ export const popularItems = [
     },
   },
   {
+    id: 'I07',
     imageUrl: require('images/item9.png'),
     title: 'CH445 Wing Chair on SUITE NY',
     buyNow: true,
@@ -61,19 +70,21 @@ export const popularItems = [
     price: 110,
   },
   {
+    id: 'I08',
     imageUrl: require('images/item10.png'),
     title: 'Kristina Dam Oak Table With White Marble Top',
     label: 'marketing',
     price: 2148,
   },
   {
+    id: 'I09',
     imageUrl: require('images/item8.png'),
-
     title: 'Vitra Cork Stool B, Cork - Design Within Reach',
     label: 'marketing',
     price: 636,
   },
   {
+    id: 'I10',
     imageUrl: require('images/item12.png'),
     title: 'Hay - About A Lounge Chair AAL 93',
     label: 'awesome',

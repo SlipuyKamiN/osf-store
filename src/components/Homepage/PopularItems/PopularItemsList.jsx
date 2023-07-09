@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import { popularItems } from 'data/popularItems';
+import { productItems } from 'data/productItems';
 import ListItem from './ListItem';
 import { ItemsList, LoadMoreButton } from './PopularItemsList.styled';
 
 const PopularItemsList = () => {
-  const [items] = useState(popularItems);
+  const [items] = useState(productItems);
   const [isLastPage, setIsLastPage] = useState(false);
   const [page, setPage] = useState(1);
 

@@ -2,14 +2,14 @@ import ImageGallery from 'react-image-gallery';
 import { PopularItemsSection, SectionTitle } from './PopularItems.styled';
 import useWindowDimensions from 'hooks/useWindowDimensions';
 import PopularItemsList from './PopularItemsList';
-import { popularItems } from 'data/popularItems';
+import { productItems } from 'data/productItems';
 import MobileGalleryTile from 'components/ProductTiles/MobileGalleryTile';
 
 const PopularItems = () => {
   const { width } = useWindowDimensions();
   const isMobileScreen = width < 768;
 
-  const galleryItems = popularItems.slice(0, 5).map(item => {
+  const galleryItems = productItems.slice(0, 5).map(item => {
     return { original: '', description: <MobileGalleryTile item={item} /> };
   });
 
