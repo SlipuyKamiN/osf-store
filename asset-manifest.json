@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/osf-store/static/css/main.52d0fc86.css",
-    "main.js": "/osf-store/static/js/main.fb232081.js",
+    "main.js": "/osf-store/static/js/main.2c8a2665.js",
     "static/media/banner.jpg": "/osf-store/static/media/banner.69c9f1677a789b9913e2.jpg",
     "static/media/carousel-1.png": "/osf-store/static/media/carousel-1.e91379b4306ea58ef40b.png",
     "static/media/page-logo@2x.jpeg": "/osf-store/static/media/page-logo@2x.9afeccc595b7d0c50da2.jpeg",
@@ -32,10 +32,10 @@
     "static/media/benefit-method.svg": "/osf-store/static/media/benefit-method.3a07d1ba9277e52b6895b0b2c5906e9f.svg",
     "index.html": "/osf-store/index.html",
     "main.52d0fc86.css.map": "/osf-store/static/css/main.52d0fc86.css.map",
-    "main.fb232081.js.map": "/osf-store/static/js/main.fb232081.js.map"
+    "main.2c8a2665.js.map": "/osf-store/static/js/main.2c8a2665.js.map"
   },
   "entrypoints": [
     "static/css/main.52d0fc86.css",
-    "static/js/main.fb232081.js"
+    "static/js/main.2c8a2665.js"
   ]
 }
