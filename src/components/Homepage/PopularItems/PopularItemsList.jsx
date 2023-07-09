@@ -1,14 +1,14 @@
 import { useState } from 'react';
-import { productItems } from 'data/productItems';
 import ListItem from './ListItem';
 import { ItemsList, LoadMoreButton } from './PopularItemsList.styled';
+import { useProducts } from 'context/ProductsContext';
 
 const PopularItemsList = () => {
-  const [items] = useState(productItems);
+  const { allProducts } = useProducts();
   const [isLastPage, setIsLastPage] = useState(false);
   const [page, setPage] = useState(1);
 
-  const itemsToRender = items.slice(0, page * 8);
+  const itemsToRender = allProducts.slice(0, page * 8);
 
   const incrementPage = () => {
     if (isLastPage) {
