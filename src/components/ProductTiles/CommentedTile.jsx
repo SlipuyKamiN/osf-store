@@ -8,7 +8,7 @@ import {
 
 const CommentedTile = ({ imageUrl, comment }) => {
   return (
-    <CommentCard imageUrl={imageUrl}>
+    <CommentCard imageUrl={require(`../../${imageUrl}`)}>
       <CommentWrapper>
         <CommentText>{comment.text}</CommentText>
         <CommentDate>

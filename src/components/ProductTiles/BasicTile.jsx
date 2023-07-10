@@ -9,7 +9,7 @@ import {
 const BasicTile = ({ item: { imageUrl, title, label } }) => {
   return (
     <BasicCard>
-      <Image src={imageUrl} alt={title} width="270px" />
+      <Image src={require(`../../${imageUrl}`)} alt={title} width="270px" />
       <BasicDescription>
         <BasicTitle>{title}</BasicTitle>
         <BasicLabel>{label}</BasicLabel>
