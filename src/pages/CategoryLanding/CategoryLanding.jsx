@@ -1,5 +1,11 @@
+import Services from 'components/CategoryLanding/Services';
+
 const CategoryLanding = () => {
-  return <div>CategoryLanding</div>;
+  return (
+    <main>
+      <Services />
+    </main>
+  );
 };
 
 export default CategoryLanding;

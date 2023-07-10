@@ -1,3 +1,4 @@
+import { useLocation } from 'react-router-dom';
 import {
   Banner,
   Description,
@@ -6,6 +7,8 @@ import {
 } from './BannerDescription.styled';
 
 const BannerDescription = ({ contentAlign }) => {
+  const location = useLocation();
+
   return (
     <Banner className={`items-${contentAlign}`}>
       <Title>Control and manage any device with cloud solutions</Title>
@@ -13,7 +16,9 @@ const BannerDescription = ({ contentAlign }) => {
         Improve business perfomance and the user experience with the right mix
         of IoT technology and processes
       </Description>
-      <ViewMoreLink to={'category-landing'}>View more</ViewMoreLink>
+      <ViewMoreLink to={'category-landing'} state={{ from: location }}>
+        View more
+      </ViewMoreLink>
     </Banner>
   );
 };
