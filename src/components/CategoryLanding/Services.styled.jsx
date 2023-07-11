@@ -30,3 +30,12 @@ export const ServicesTitle = styled(SectionTitle)`
     opacity: 0.5;
   }
 `;
+
+export const ResultCounter = styled.p`
+  text-align: center;
+  margin-bottom: 21px;
+
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 31px;
+  }
+`;

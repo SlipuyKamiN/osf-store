@@ -16,7 +16,9 @@ const BreadCrumbs = () => {
   return (
     <HistoryList>
       {history.map(({ name, pathName }) => (
-        <HistoryListItem>{<Link to={pathName}>{name}</Link>}</HistoryListItem>
+        <HistoryListItem key={name}>
+          {<Link to={pathName}>{name}</Link>}
+        </HistoryListItem>
       ))}
     </HistoryList>
   );

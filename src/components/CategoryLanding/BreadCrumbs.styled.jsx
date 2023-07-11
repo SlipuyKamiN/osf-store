@@ -18,7 +18,7 @@ export const HistoryList = styled.ul`
 `;
 
 export const HistoryListItem = styled.li`
-  &:not(:first-child)::before {
+  &:not(:first-of-type)::before {
     content: '/';
     font-weight: 600;
     margin-right: 15px;
