@@ -13,7 +13,10 @@ export const App = () => {
         <Route index element={<Home />}></Route>
         <Route path="cart" element={<Cart />}></Route>
         <Route path="category-landing" element={<CategoryLanding />}></Route>
-        <Route path="product-detailed" element={<ProductDetailed />}></Route>
+        <Route
+          path="OSF-Theme/:productName"
+          element={<ProductDetailed />}
+        ></Route>
         <Route path="*" element={<ErrorPage />}></Route>
       </Route>
     </Routes>

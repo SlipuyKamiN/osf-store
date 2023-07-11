@@ -11,13 +11,13 @@ import {
 const BuyNowTile = ({ item: { imageUrl, title, price } }) => {
   return (
     <BasicCard>
-      <Link to="product-detailed">
+      <Link to={`OSF-Theme/${title}`}>
         <Image src={require(`../../${imageUrl}`)} alt={title} width="270px" />
       </Link>
       <BuyNowDescription>
-        <BuyNowLink to="product-detailed">{title}</BuyNowLink>
+        <BuyNowLink to={`OSF-Theme/${title}`}>{title}</BuyNowLink>
         <BuyNowWrapper>
-          <BuyNowPrice to="product-detailed">$ {price}</BuyNowPrice>
+          <BuyNowPrice to={`OSF-Theme/${title}`}>$ {price}</BuyNowPrice>
           <BuyNowButton type="button">Buy now</BuyNowButton>
         </BuyNowWrapper>
       </BuyNowDescription>

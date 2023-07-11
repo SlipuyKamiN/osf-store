@@ -10,7 +10,7 @@ const BreadCrumbs = () => {
     .filter(pathname => pathname !== '');
 
   pathNames.forEach(pathName => {
-    history.push({ name: pathName.replace('-', ' '), pathName });
+    history.push({ name: pathName.replace(/-|%20/g, ' '), pathName });
   });
 
   return (
