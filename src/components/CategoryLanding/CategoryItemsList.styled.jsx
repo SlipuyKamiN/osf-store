@@ -30,6 +30,7 @@ export const CategoryList = styled.ul`
 export const LoadMoreButton = styled.button`
   width: 156px;
   height: 39px;
+  margin: 0;
   border-radius: 20px;
 
   text-align: center;

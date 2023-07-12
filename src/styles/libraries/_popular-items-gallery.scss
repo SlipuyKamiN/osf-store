@@ -54,3 +54,23 @@
     }
   }
 }
+
+.popular-items.dark-bullets .image-gallery-bullets {
+  .image-gallery-bullet {
+    padding: 4px;
+    margin: 5px 10px;
+    border: 3px solid transparent;
+    background-color: RGBA(38, 42, 50, 0.5);
+
+    &.active {
+      border: 3px solid RGBA(38, 42, 50, 1);
+      background-color: transparent;
+    }
+
+    &:hover,
+    &:focus {
+      border: 3px solid RGBA(38, 42, 50, 1);
+      background-color: transparent;
+    }
+  }
+}
