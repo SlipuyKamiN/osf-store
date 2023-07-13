@@ -1,12 +1,13 @@
 import Services from 'components/CategoryLanding/Services';
+import { ServicesMain } from 'components/CategoryLanding/Services.styled';
 import FeaturedProducts from 'components/Homepage/FeaturedProducts/FeaturedProducts';
 
 const CategoryLanding = () => {
   return (
-    <main>
+    <ServicesMain>
       <Services />
       <FeaturedProducts />
-    </main>
+    </ServicesMain>
   );
 };
 

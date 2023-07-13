@@ -4,6 +4,12 @@ import { colors, transition } from 'styles/common/vars';
 export const CategoryListSection = styled.section`
   padding: 0;
   text-align: center;
+
+  padding: 21px 0 50px;
+
+  @media screen and (min-width: 1280px) {
+    padding: 31px 0 75px;
+  }
 `;
 
 export const CategoryList = styled.ul`
@@ -12,11 +18,6 @@ export const CategoryList = styled.ul`
   align-items: center;
   flex-wrap: wrap;
   gap: 27px;
-  margin-bottom: 47px;
-
-  @media screen and (min-width: 1280px) {
-    margin-bottom: 117px;
-  }
 
   & > li {
     width: 293px;
@@ -31,6 +32,7 @@ export const LoadMoreButton = styled.button`
   width: 156px;
   height: 39px;
   margin: 0;
+  margin-top: 47px;
   border-radius: 20px;
 
   text-align: center;
@@ -43,6 +45,10 @@ export const LoadMoreButton = styled.button`
 
   transition: background-color ${transition.duration},
     border-color ${transition.duration};
+
+  @media screen and (min-width: 1280px) {
+    margin-top: 117px;
+  }
 
   &:hover,
   &:focus {

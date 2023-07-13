@@ -5,12 +5,13 @@ import {
   Select,
   SelectWrapper,
   ToggleFilterButton,
+  ResultCounter,
 } from './Filters.styled';
 
 const { default: useWindowDimensions } = require('hooks/useWindowDimensions');
 const { useState } = require('react');
 
-const Filter = () => {
+const Filter = ({ allProducts }) => {
   const { width } = useWindowDimensions();
   const [isFilterOpened, setIsFilterOpened] = useState(true);
   const [selectedColor, setSelectedColor] = useState('#FFFFFF');
@@ -141,6 +142,7 @@ const Filter = () => {
           </div>
         </FilterForm>
       )}
+      <ResultCounter>{allProducts.length} results in apparel</ResultCounter>
     </FilterSection>
   );
 };

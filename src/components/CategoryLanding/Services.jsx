@@ -1,24 +1,19 @@
 import { useProducts } from 'context/ProductsContext';
 import BreadCrumbs from './BreadCrumbs';
 import Filter from './Filters';
-import {
-  ResultCounter,
-  ServicesSection,
-  ServicesTitle,
-} from './Services.styled';
+import { ServicesTitle } from './Services.styled';
 import CategoryItemsList from './CategoryItemsList';
 
 const Services = () => {
   const { allProducts } = useProducts();
 
   return (
-    <ServicesSection>
-      <BreadCrumbs />
+    <>
+      <BreadCrumbs padding={['24px 0 34px', '30px 0']} />
       <ServicesTitle>Services</ServicesTitle>
-      <Filter />
-      <ResultCounter>{allProducts.length} results in apparel</ResultCounter>
+      <Filter allProducts={allProducts} />
       <CategoryItemsList allProducts={allProducts} />
-    </ServicesSection>
+    </>
   );
 };
 

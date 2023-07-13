@@ -2,10 +2,14 @@ import styled from '@emotion/styled';
 import { colors } from 'styles/common/vars';
 
 export const FilterSection = styled.section`
-  padding: 0;
+  padding: 0 13px;
   width: 100%;
   text-align: center;
   font-size: 14px;
+
+  @media screen and (min-width: 1280px) {
+    padding: 0 54px;
+  }
 `;
 
 export const ToggleFilterButton = styled.button`
@@ -16,7 +20,7 @@ export const ToggleFilterButton = styled.button`
   color: ${colors.accentGreen};
 `;
 
-export const FilterForm = styled.section`
+export const FilterForm = styled.form`
   width: 100%;
   border-radius: 6px;
   padding: 15px;
@@ -100,4 +104,8 @@ export const ColorPickerButton = styled.input`
   &:not(:last-child) {
     margin-right: 7px;
   }
+`;
+
+export const ResultCounter = styled.p`
+  text-align: center;
 `;
