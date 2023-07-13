@@ -7,7 +7,7 @@ import Cart from 'pages/Cart/Cart';
 import CategoryLanding from 'pages/CategoryLanding/CategoryLanding';
 import Home from 'pages/Home/Home';
 import ProductDetailed from 'pages/ProductDetailed/ProductDetailed';
-import { Navigate, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 
 export const App = () => {
   return (
@@ -16,8 +16,10 @@ export const App = () => {
         <Route index element={<Home />}></Route>
         <Route path="cart" element={<Cart />}></Route>
         <Route path="category-landing" element={<CategoryLanding />}></Route>
-        <Route path="OSF-Theme/:productId" element={<ProductDetailed />}>
-          <Route index element={<Navigate to="description" replace={true} />} />
+        <Route
+          path="product-detailed/:productId/:productTitle"
+          element={<ProductDetailed />}
+        >
           <Route path="description" element={<Description />} />
           <Route path="additional-information" element={<AdditionalInfo />} />
           <Route path="reviews" element={<Reviews />} />

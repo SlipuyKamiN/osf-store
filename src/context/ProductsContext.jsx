@@ -1,4 +1,6 @@
 import $ from 'jquery';
+import data from '../data/productItems.json';
+
 import { createContext, useContext, useEffect, useState } from 'react';
 
 const ProductsContext = createContext({
@@ -6,6 +8,8 @@ const ProductsContext = createContext({
   wishlist: [],
   cart: [],
 });
+
+const BASE_URL = './productItems.json';
 
 export const useProducts = () => useContext(ProductsContext);
 
@@ -22,12 +26,12 @@ const checkLocalStorage = key => {
 };
 
 export const ProductsProvider = ({ children }) => {
-  const [allProducts, setAllProducts] = useState([]);
+  const [allProducts, setAllProducts] = useState(data);
   const [wishlist, setWishlist] = useState(() => checkLocalStorage('wishlist'));
   const [cart, setCart] = useState(() => checkLocalStorage('cart'));
 
   useEffect(() => {
-    $.ajax('./productItems.json', {
+    $.ajax(BASE_URL, {
       type: 'GET',
       dataType: 'json',
       async: false,

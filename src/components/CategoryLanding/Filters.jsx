@@ -7,9 +7,8 @@ import {
   ToggleFilterButton,
   ResultCounter,
 } from './Filters.styled';
-
-const { default: useWindowDimensions } = require('hooks/useWindowDimensions');
-const { useState } = require('react');
+import useWindowDimensions from 'hooks/useWindowDimensions';
+import { useState } from 'react';
 
 const Filter = ({ allProducts }) => {
   const { width } = useWindowDimensions();

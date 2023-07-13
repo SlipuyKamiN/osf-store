@@ -13,15 +13,15 @@ const BuyNowTile = ({ item }) => {
 
   return (
     <BasicCard>
-      <Link to={`OSF-Theme/${id}`} state={{ item }}>
+      <Link to={`product-detailed/${id}/${title}/description`}>
         <Image src={require(`../../${imageUrl}`)} alt={title} width="270px" />
       </Link>
       <BuyNowDescription>
-        <BuyNowLink to={`OSF-Theme/${id}`} state={{ item }}>
+        <BuyNowLink to={`product-detailed/${id}/${title}/description`}>
           {title}
         </BuyNowLink>
         <BuyNowWrapper>
-          <BuyNowPrice to={`OSF-Theme/${id}`} state={{ item }}>
+          <BuyNowPrice to={`product-detailed/${id}/${title}/description`}>
             $ {price}
           </BuyNowPrice>
           <BuyNowButton type="button">Buy now</BuyNowButton>
