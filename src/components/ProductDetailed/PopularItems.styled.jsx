@@ -2,12 +2,12 @@ import styled from '@emotion/styled';
 import { colors } from 'styles/common/vars';
 
 export const PopularItemsSection = styled.section`
-  padding-top: 32px;
+  padding-top: 20px;
   padding-bottom: 64px;
   background-color: ${colors.desert};
 
   @media screen and (min-width: 1280px) {
-    padding-top: 81px;
+    padding-top: 26px;
     padding-bottom: 59px;
   }
 `;

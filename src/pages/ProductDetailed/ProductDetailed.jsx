@@ -1,25 +1,16 @@
 import BreadCrumbs from 'components/CategoryLanding/BreadCrumbs';
 import PopularItems from 'components/ProductDetailed/PopularItems';
 import ProductDetails from 'components/ProductDetailed/ProductDetails';
-import {
-  ProductDetailedMain,
-  ScrollToTopButton,
-} from 'components/ProductDetailed/ProductDetails.styled';
+import { ProductDetailedMain } from 'components/ProductDetailed/ProductDetails.styled';
+import ScrollToTop from 'components/ProductDetailed/ScrollToTop';
 
 const ProductDetailed = () => {
-  const handleScrollToTop = () => {
-    window.scrollTo({ top: 0 });
-  };
-
   return (
     <ProductDetailedMain>
-      <BreadCrumbs />
+      <BreadCrumbs padding={['26px 0 0', '48px 0 0']} />
       <ProductDetails />
       <PopularItems />
-
-      <ScrollToTopButton type="button" onClick={handleScrollToTop}>
-        Scroll to top
-      </ScrollToTopButton>
+      <ScrollToTop />
     </ProductDetailedMain>
   );
 };

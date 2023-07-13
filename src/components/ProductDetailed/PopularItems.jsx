@@ -8,7 +8,6 @@ import useWindowDimensions from 'hooks/useWindowDimensions';
 import MobileGalleryTile from 'components/ProductTiles/MobileGalleryTile';
 import { useProducts } from 'context/ProductsContext';
 import BasicTile from 'components/ProductTiles/BasicTile';
-import { ScrollToTopButton } from './ProductDetails.styled';
 
 const PopularItems = () => {
   const { allProducts } = useProducts();

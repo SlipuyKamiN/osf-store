@@ -1,5 +1,10 @@
 .product-details.image-gallery {
   margin-bottom: 48px;
+
+  @media screen and (min-width: 1280px) {
+    width: 685px;
+    margin-bottom: 0;
+  }
 }
 
 .product-details .image-gallery-bullets {

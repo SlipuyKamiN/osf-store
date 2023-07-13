@@ -1,8 +1,12 @@
-import { HistoryList, HistoryListItem } from './BreadCrumbs.styled';
+import {
+  BreadCrumbsSection,
+  HistoryList,
+  HistoryListItem,
+} from './BreadCrumbs.styled';
 
 const { useLocation, Link } = require('react-router-dom');
 
-const BreadCrumbs = () => {
+const BreadCrumbs = ({ padding }) => {
   const location = useLocation();
   const history = [{ name: 'Home', pathName: '/' }];
   const pathNames = location.pathname
@@ -14,13 +18,15 @@ const BreadCrumbs = () => {
   });
 
   return (
-    <HistoryList>
-      {history.map(({ name, pathName }) => (
-        <HistoryListItem key={name}>
-          {<Link to={pathName}>{name}</Link>}
-        </HistoryListItem>
-      ))}
-    </HistoryList>
+    <BreadCrumbsSection padding={padding}>
+      <HistoryList>
+        {history.map(({ name, pathName }) => (
+          <HistoryListItem key={name}>
+            {<Link to={pathName}>{name}</Link>}
+          </HistoryListItem>
+        ))}
+      </HistoryList>
+    </BreadCrumbsSection>
   );
 };
 

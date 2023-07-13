@@ -1,21 +1,31 @@
-const { Link, Outlet } = require('react-router-dom');
+import { useEffect } from 'react';
+import {
+  TabInfoWrapper,
+  TabLink,
+  TabListItem,
+  TabsList,
+  TabsSection,
+} from './ProductTabs.styled';
+import { Outlet } from 'react-router-dom';
 
 const ProductTabs = () => {
   return (
-    <section>
-      <ul>
-        <li>
-          <Link to="description">description</Link>
-        </li>
-        <li>
-          <Link to="additional-information">additional-info</Link>
-        </li>
-        <li>
-          <Link to="reviews">reviews</Link>
-        </li>
-      </ul>
-      <Outlet />
-    </section>
+    <TabsSection>
+      <TabsList>
+        <TabListItem>
+          <TabLink to="description">Description</TabLink>
+        </TabListItem>
+        <TabListItem>
+          <TabLink to="additional-information">Additional information</TabLink>
+        </TabListItem>
+        <TabListItem>
+          <TabLink to="reviews">Reviews (2)</TabLink>
+        </TabListItem>
+      </TabsList>
+      <TabInfoWrapper>
+        <Outlet />
+      </TabInfoWrapper>
+    </TabsSection>
   );
 };
 
