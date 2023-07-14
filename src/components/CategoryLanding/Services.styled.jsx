@@ -3,7 +3,7 @@ import { SectionTitle } from 'components/Homepage/PopularItems/PopularItems.styl
 import { colors } from 'styles/common/vars';
 
 export const ServicesMain = styled.main`
-  background-color: ${colors.servicesBg};
+  background-color: ${colors.desertBg};
 `;
 
 export const ServicesTitle = styled(SectionTitle)`

@@ -21,6 +21,7 @@ export const SectionTitle = styled.h2`
   margin-bottom: 24px;
 
   font-size: 16px;
+  font-weight: 900;
 
   color: ${colors.primaryWhite};
 

@@ -7,7 +7,7 @@ import Cart from 'pages/Cart/Cart';
 import CategoryLanding from 'pages/CategoryLanding/CategoryLanding';
 import Home from 'pages/Home/Home';
 import ProductDetailed from 'pages/ProductDetailed/ProductDetailed';
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 
 export const App = () => {
   return (
@@ -24,7 +24,8 @@ export const App = () => {
           <Route path="additional-information" element={<AdditionalInfo />} />
           <Route path="reviews" element={<Reviews />} />
         </Route>
-        <Route path="*" element={<ErrorPage />}></Route>
+        <Route path="404" element={<ErrorPage />} />
+        <Route path="*" element={<Navigate to="404" />}></Route>
       </Route>
     </Routes>
   );
