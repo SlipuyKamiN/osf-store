@@ -66,7 +66,18 @@ export const ProductsProvider = ({ children }) => {
         break;
 
       case 'cart/remove':
-        setWishlist(prevState => prevState.filter(({ id }) => id !== payload));
+        setCart(prevState => prevState.filter(({ id }) => id !== payload));
+        break;
+
+      case 'cart/updateQuantity':
+        setCart(prevState =>
+          prevState.map(item => {
+            if (item.id === payload.id) {
+              return { ...item, orderQuantity: payload.orderQuantity };
+            }
+            return item;
+          })
+        );
         break;
 
       default:

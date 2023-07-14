@@ -18,7 +18,7 @@ const UserBar = ({ mobile = false }) => {
         </IconLink>
       </li>
       <li>
-        <IconLink to="cart" className="icon-bag">
+        <IconLink to="shopping-cart" className="icon-bag">
           <IconCounter>{cart.length}</IconCounter>
         </IconLink>
       </li>

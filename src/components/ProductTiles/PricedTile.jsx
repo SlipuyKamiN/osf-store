@@ -23,7 +23,7 @@ const PricedTile = ({ item }) => {
               type="button"
               className="icon-plus"
               onClick={() => {
-                reducer('cart/add', item);
+                reducer('cart/add', { ...item, orderQuantity: 1 });
               }}
             ></AddButton>
           </li>
@@ -32,7 +32,7 @@ const PricedTile = ({ item }) => {
               type="button"
               className="icon-heart-red"
               onClick={() => {
-                reducer('wishlist/add', item);
+                reducer('wishlist/add', { ...item, orderQuantity: 1 });
               }}
             ></AddButton>
           </li>

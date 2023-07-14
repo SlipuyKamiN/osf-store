@@ -1,7 +1,7 @@
 import {
   ErrorDescription,
   ErrorInfo,
-  ErrorPageTitle,
+  PageTitle,
   ErrorTitle,
   GoHomeLink,
   OopsTitle,
@@ -16,7 +16,7 @@ import {
 const ErrorSection = () => {
   return (
     <Section>
-      <ErrorPageTitle>404</ErrorPageTitle>
+      <PageTitle>404</PageTitle>
       <ErrorInfo>
         <OopsWrapper>
           <OopsTitle>Oops!</OopsTitle>

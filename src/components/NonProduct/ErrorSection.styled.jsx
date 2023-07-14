@@ -13,8 +13,9 @@ export const Section = styled.section`
   padding-bottom: 39px;
 `;
 
-export const ErrorPageTitle = styled(ServicesTitle)`
+export const PageTitle = styled(ServicesTitle)`
   padding: 27px 0;
+  text-transform: uppercase;
 
   &::before,
   &&::after {
