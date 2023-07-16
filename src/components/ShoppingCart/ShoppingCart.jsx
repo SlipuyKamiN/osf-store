@@ -2,6 +2,7 @@ import { PageTitle, Section } from 'components/NonProduct/ErrorSection.styled';
 import { CartItemsList, CartItemsSection } from './ShoppingCart.styled';
 import { useProducts } from 'context/ProductsContext';
 import CartItem from './CartItem';
+import OrderSummary from './OrderSummary';
 
 const ShoppingCart = () => {
   const { cart } = useProducts();
@@ -16,6 +17,7 @@ const ShoppingCart = () => {
           })}
         </CartItemsList>
       </CartItemsSection>
+      <OrderSummary cart={cart} />
     </Section>
   );
 };

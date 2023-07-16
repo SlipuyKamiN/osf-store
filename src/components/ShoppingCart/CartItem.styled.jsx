@@ -2,15 +2,17 @@ import styled from '@emotion/styled';
 import { colors } from 'styles/common/vars';
 
 export const Item = styled.li`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   &:not(:last-of-type) {
     margin-bottom: 24px;
   }
 
   @media screen and (min-width: 1280px) {
     padding: 10px;
-    display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
 
     &:not(:last-of-type) {
       margin-bottom: 8px;
