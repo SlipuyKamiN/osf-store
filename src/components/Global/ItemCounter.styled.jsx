@@ -20,7 +20,7 @@ export const ItemCounterWrapper = styled.div`
 
 export const CounterInput = styled.input`
   width: 100%;
-  padding: 4px 5px 0;
+  padding: 2px 5px 0;
   background-color: transparent;
   border: none;
   text-align: center;
@@ -37,6 +37,7 @@ export const CounterButton = styled.button`
   padding: 0 10px;
 
   font-size: 18px;
+  line-height: 1.2;
   font-weight: 900;
   color: ${colors.gray};
   border: none;

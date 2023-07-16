@@ -1,5 +1,13 @@
-import { PageTitle, Section } from 'components/NonProduct/ErrorSection.styled';
-import { CartItemsList, CartItemsSection } from './ShoppingCart.styled';
+import {
+  GoHomeLink,
+  PageTitle,
+  Section,
+} from 'components/NonProduct/ErrorSection.styled';
+import {
+  CartItemsList,
+  CartItemsSection,
+  EmptyListTitle,
+} from './ShoppingCart.styled';
 import { useProducts } from 'context/ProductsContext';
 import CartItem from './CartItem';
 import OrderSummary from './OrderSummary';
@@ -11,11 +19,18 @@ const ShoppingCart = () => {
     <Section>
       <PageTitle>Shopping cart</PageTitle>
       <CartItemsSection>
-        <CartItemsList>
-          {cart.map(item => {
-            return <CartItem item={item} key={item.id} />;
-          })}
-        </CartItemsList>
+        {cart.length > 0 ? (
+          <CartItemsList>
+            {cart.map(item => {
+              return <CartItem item={item} key={item.id} />;
+            })}
+          </CartItemsList>
+        ) : (
+          <EmptyListTitle className="icon-bag">
+            <span>Oops, your cart is empty yet,</span>
+            <GoHomeLink to="/">let`s buy something.</GoHomeLink>
+          </EmptyListTitle>
+        )}
       </CartItemsSection>
       <OrderSummary cart={cart} />
     </Section>

@@ -9,7 +9,6 @@ export const SummarySection = styled.section`
   padding: 45px;
 
   font-size: 14px;
-  margin-bottom: 5px;
 
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
@@ -38,11 +37,11 @@ export const CouponForm = styled.form`
 
 export const CouponInput = styled.input`
   width: 100%;
-  height: 39px;
 
   padding: 10px 20px;
 
   text-transform: uppercase;
+  line-height: 1;
 
   border-radius: 20px;
   border: 2px solid ${colors.desert};
@@ -53,7 +52,7 @@ export const CouponInput = styled.input`
 `;
 
 export const Button = styled.button`
-  padding: 9px;
+  padding: 12px 9px 10px;
 
   text-transform: uppercase;
 
@@ -61,6 +60,7 @@ export const Button = styled.button`
   border: 2px solid ${colors.accentGreen};
 
   font-size: 14px;
+  line-height: 1;
   color: ${colors.accentGreen};
   background-color: transparent;
 
@@ -143,6 +143,8 @@ export const FormTitle = styled.h4`
 `;
 
 export const RadioButtonWrapper = styled.div`
+  position: relative;
+
   &:not(:last-of-type) {
     margin-bottom: 12px;
   }
@@ -150,8 +152,38 @@ export const RadioButtonWrapper = styled.div`
 
 export const RadioButton = styled.input`
   margin-right: 13px;
-  accent-color: ${colors.accentGreen};
-  padding: 2px;
+
+  visibility: hidden;
+
+  &:checked + label::after {
+    background-color: ${colors.accentGreen};
+  }
+`;
+
+export const RadioLabel = styled.label`
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 13px;
+    height: 13px;
+
+    border-radius: 50%;
+    border: 2px solid ${colors.desert};
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+  }
 `;
 
 export const DeliveryPriceWrapper = styled.span`

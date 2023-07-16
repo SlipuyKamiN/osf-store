@@ -14,6 +14,7 @@ import {
   OrderTotalTable,
   UpdateButton,
   RadioButtonWrapper,
+  RadioLabel,
 } from './OrderSummary.styled';
 
 const OrderSummary = ({ cart }) => {
@@ -64,9 +65,9 @@ const OrderSummary = ({ cart }) => {
                 value="10"
                 id="Flat Rate"
               />
-              <label htmlFor="Flat Rate" name="delivery" value="10">
+              <RadioLabel htmlFor="Flat Rate" name="delivery" value="10">
                 Flat Rate <DeliveryPriceWrapper>$10.00</DeliveryPriceWrapper>
-              </label>
+              </RadioLabel>
             </RadioButtonWrapper>
 
             <RadioButtonWrapper>
@@ -78,7 +79,7 @@ const OrderSummary = ({ cart }) => {
                 value="00"
                 id="Free shipping"
               />
-              <label htmlFor="Free shipping">Free shipping</label>
+              <RadioLabel htmlFor="Free shipping">Free shipping</RadioLabel>
             </RadioButtonWrapper>
 
             <RadioButtonWrapper>
@@ -90,10 +91,10 @@ const OrderSummary = ({ cart }) => {
                 value="60"
                 id="International"
               />
-              <label htmlFor="International">
+              <RadioLabel htmlFor="International">
                 International:
                 <DeliveryPriceWrapper>$60.00</DeliveryPriceWrapper>
-              </label>
+              </RadioLabel>
             </RadioButtonWrapper>
 
             <RadioButtonWrapper>
@@ -105,10 +106,10 @@ const OrderSummary = ({ cart }) => {
                 value="5"
                 id="Local delivery"
               />
-              <label htmlFor="Local delivery">
+              <RadioLabel htmlFor="Local delivery">
                 Local delivery:
                 <DeliveryPriceWrapper>$5.00</DeliveryPriceWrapper>
-              </label>
+              </RadioLabel>
             </RadioButtonWrapper>
 
             <RadioButtonWrapper>
@@ -120,7 +121,9 @@ const OrderSummary = ({ cart }) => {
                 value="0"
                 id="Local pickup"
               />
-              <label htmlFor="Local pickup">Local pickup (Free)</label>
+              <RadioLabel htmlFor="Local pickup">
+                Local pickup (Free)
+              </RadioLabel>
             </RadioButtonWrapper>
           </div>
         </DeliveryForm>
