@@ -1,6 +1,6 @@
 import BreadCrumbs from 'components/CategoryLanding/BreadCrumbs';
-import ErrorSection from 'components/NonProduct/ErrorSection';
-import { ErrorMain } from 'components/NonProduct/ErrorSection.styled';
+import ErrorSection from 'components/NonProduct/ErrorSection/ErrorSection';
+import { ErrorMain } from 'components/NonProduct/ErrorSection/ErrorSection.styled';
 
 const ErrorPage = () => {
   return (

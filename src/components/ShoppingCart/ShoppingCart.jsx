@@ -2,7 +2,7 @@ import {
   GoHomeLink,
   PageTitle,
   Section,
-} from 'components/NonProduct/ErrorSection.styled';
+} from 'components/NonProduct/ErrorSection/ErrorSection.styled';
 import {
   CartItemsList,
   CartItemsSection,

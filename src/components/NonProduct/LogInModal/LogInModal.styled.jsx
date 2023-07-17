@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { ProceedButton } from 'components/ShoppingCart/OrderSummary.styled';
 import { colors, transition } from 'styles/common/vars';
-import { GoHomeLink } from '../ErrorSection.styled';
+import { GoHomeLink } from '../ErrorSection/ErrorSection.styled';
 
 export const Backdrop = styled.div`
   position: fixed;
