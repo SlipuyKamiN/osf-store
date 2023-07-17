@@ -1,28 +1,38 @@
 import { useProducts } from 'context/ProductsContext';
 import { IconsList, IconCounter, IconLink } from './UserBar.styled';
+import LogInModal from 'components/NonProduct/LogInModal/LogInModal';
+import { useState } from 'react';
 
 const UserBar = ({ mobile = false }) => {
   const { wishlist, cart } = useProducts();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const toggleModal = () => {
+    document.querySelector('body').classList.toggle('modal-open');
+    setIsModalOpen(!isModalOpen);
+  };
 
   return (
-    <IconsList className={mobile && 'mobile'}>
-      <li>
-        <IconLink to="search" className="icon-search" />
-      </li>
-      <li>
-        <IconLink to="logIn" className="icon-user" />
-      </li>
-      <li>
-        <IconLink to="favourite" className="icon-heart">
-          <IconCounter>{wishlist.length}</IconCounter>
-        </IconLink>
-      </li>
-      <li>
-        <IconLink to="shopping-cart" className="icon-bag">
-          <IconCounter>{cart.length}</IconCounter>
-        </IconLink>
-      </li>
-    </IconsList>
+    <>
+      <IconsList className={mobile && 'mobile'}>
+        <li>
+          <IconLink to="search" className="icon-search" />
+        </li>
+        <li>
+          <IconLink onClick={toggleModal} className="icon-user" />
+        </li>
+        <li>
+          <IconLink to="favourite" className="icon-heart">
+            <IconCounter>{wishlist.length}</IconCounter>
+          </IconLink>
+        </li>
+        <li>
+          <IconLink to="shopping-cart" className="icon-bag">
+            <IconCounter>{cart.length}</IconCounter>
+          </IconLink>
+        </li>
+      </IconsList>
+      {isModalOpen && <LogInModal toggleModal={toggleModal} />}
+    </>
   );
 };
 

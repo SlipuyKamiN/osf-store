@@ -7,8 +7,6 @@ import CategoryItemsList from './CategoryItemsList';
 const Services = () => {
   const { allProducts } = useProducts();
 
-  console.log(allProducts);
-
   return (
     <>
       <BreadCrumbs padding={['24px 0 34px', '30px 0']} />
