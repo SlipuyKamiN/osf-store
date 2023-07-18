@@ -37,3 +37,13 @@
     border-color: #84bc22;
   }
 }
+
+.product-details .image-gallery-icon.image-gallery-fullscreen-button {
+  bottom: 90%;
+  right: 90%;
+
+  &:hover,
+  &:focus {
+    color: #84bc22;
+  }
+}

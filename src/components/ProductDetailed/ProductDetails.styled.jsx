@@ -33,4 +33,17 @@ export const ProductInfoWrapper = styled.div`
     column-gap: 68px;
     row-gap: 76px;
   }
+
+  @media print {
+    display: flex;
+    padding: 20px;
+
+    .image-gallery {
+      width: 800px;
+    }
+
+    section {
+      width: 375px;
+    }
+  }
 `;

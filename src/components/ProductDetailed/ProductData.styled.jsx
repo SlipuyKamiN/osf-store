@@ -1,11 +1,15 @@
 import styled from '@emotion/styled';
 import { LoadMoreButton } from 'components/CategoryLanding/CategoryItemsList.styled';
 import { Select } from 'components/CategoryLanding/Filters.styled';
-import { colors } from 'styles/common/vars';
+import { colors, transition } from 'styles/common/vars';
 
 export const ProductPrice = styled.h2`
   font-size: 31px;
   margin-bottom: 28px;
+
+  @media screen and (min-width: 1280px) {
+    font-size: 48px;
+  }
 `;
 
 export const ProductInfo = styled.section`
@@ -52,8 +56,31 @@ export const ColorSelect = styled(Select)`
   border-color: ${colors.desert};
 `;
 
+export const AddToCartWrapper = styled.div`
+  margin-bottom: 34px;
+
+  @media screen and (min-width: 1280px) {
+    display: flex;
+    gap: 21px;
+    margin-bottom: 50px;
+
+    button {
+      margin: 0;
+    }
+  }
+`;
+
 export const AddToCart = styled(LoadMoreButton)`
   border-color: ${colors.desert};
+  margin: 0;
+`;
+
+export const ButtonsList = styled.ul`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
   margin-bottom: 34px;
 `;
 
@@ -62,11 +89,31 @@ export const ShowMoreButton = styled.button`
   background-color: transparent;
   border: none;
   padding: 0;
-  margin-bottom: 34px;
 
   &:hover,
   &:focus {
     color: ${colors.accentBlue};
+    text-decoration: underline;
+  }
+`;
+
+export const PrintButton = styled.button`
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  font-size: 24px;
+
+  color: ${colors.accentGreen};
+
+  transition: color ${transition.duration};
+
+  &:hover,
+  &:focus {
+    color: ${colors.accentBlue};
+  }
+
+  @media print {
+    display: none;
   }
 `;
 

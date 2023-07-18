@@ -1,8 +1,11 @@
 import { useProducts } from 'context/ProductsContext';
 import {
   AddToCart,
+  AddToCartWrapper,
+  ButtonsList,
   ColorSelect,
   Description,
+  PrintButton,
   ProductInfo,
   ProductPrice,
   SelectWrapper,
@@ -12,8 +15,9 @@ import {
 import { useState } from 'react';
 import SocialIconsList from 'components/Global/Footer/SocialIconsList';
 import ItemCounter from 'components/Global/ItemCounter';
+import ReactToPrint from 'react-to-print';
 
-const ProductData = ({ item }) => {
+const ProductData = ({ item, componentToPrint }) => {
   const { reducer } = useProducts();
   const [selectedColor, setSelectedColor] = useState('#999999');
   const [orderQuantity, setOrderQuantity] = useState(1);
@@ -45,22 +49,36 @@ const ProductData = ({ item }) => {
           <option value="#43C0CF">Sky Blue</option>
         </ColorSelect>
       </SelectWrapper>
-      <ItemCounter
-        orderQuantity={orderQuantity}
-        setOrderQuantity={setOrderQuantity}
-      />
-      <AddToCart type="button" onClick={handleAddToCart}>
-        Add to cart
-      </AddToCart>
+      <AddToCartWrapper>
+        <ItemCounter
+          orderQuantity={orderQuantity}
+          setOrderQuantity={setOrderQuantity}
+        />
+        <AddToCart type="button" onClick={handleAddToCart}>
+          Add to cart
+        </AddToCart>
+      </AddToCartWrapper>
       <Description>{showLimitedText()}</Description>
-      <ShowMoreButton
-        type="button"
-        onClick={() => {
-          setLimitText(!limitText);
-        }}
-      >
-        {limitText ? 'Show less' : 'Show more'}
-      </ShowMoreButton>
+      <ButtonsList>
+        <li>
+          <ShowMoreButton
+            type="button"
+            onClick={() => {
+              setLimitText(!limitText);
+            }}
+          >
+            {limitText ? 'Show less' : 'Show more'}
+          </ShowMoreButton>
+        </li>
+        <li>
+          <ReactToPrint
+            trigger={() => (
+              <PrintButton className="icon-printer" type="button" />
+            )}
+            content={() => componentToPrint.current}
+          />
+        </li>
+      </ButtonsList>
       <ShareIconsWrapper>
         Share
         <SocialIconsList />

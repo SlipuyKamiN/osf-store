@@ -15,7 +15,6 @@ const checkLocalStorage = () => {
   try {
     const isPolicyAccepted = localStorage.getItem('policyAccepted');
 
-    console.log(isPolicyAccepted);
     return JSON.parse(isPolicyAccepted);
   } catch (error) {
     console.log(error);

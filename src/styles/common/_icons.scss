@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src: url('../../fonts/icomoon.eot?fh48qp');
-  src: url('../../fonts/icomoon.eot?fh48qp#iefix') format('embedded-opentype'),
-    url('../../fonts/icomoon.ttf?fh48qp') format('truetype'),
-    url('../../fonts/icomoon.woff?fh48qp') format('woff'),
-    url('../../fonts/icomoon.svg?fh48qp#icomoon') format('svg');
+  src: url('../../fonts/icomoon.eot?9bep1j');
+  src: url('../../fonts/icomoon.eot?9bep1j#iefix') format('embedded-opentype'),
+    url('../../fonts/icomoon.ttf?9bep1j') format('truetype'),
+    url('../../fonts/icomoon.woff?9bep1j') format('woff'),
+    url('../../fonts/icomoon.svg?9bep1j#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -13,7 +13,7 @@
 [class^='icon-'],
 [class*=' icon-'] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon';
+  font-family: 'icomoon' !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -26,6 +26,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-printer:before {
+  content: '\e90f';
+}
 .icon-heart-red:before {
   content: '\e90e';
   color: #e73c68;
