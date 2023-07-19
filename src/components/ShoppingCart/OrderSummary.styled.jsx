@@ -167,8 +167,8 @@ export const RadioLabel = styled.label`
     content: '';
     position: absolute;
     left: 0;
-    width: 13px;
-    height: 13px;
+    width: 12px;
+    height: 12px;
 
     border-radius: 50%;
     border: 2px solid ${colors.desert};
