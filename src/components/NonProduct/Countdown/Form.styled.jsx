@@ -10,6 +10,8 @@ export const CounterForm = styled.form`
   max-width: 470px;
   margin: 0 auto;
 
+  text-align: center;
+
   @media screen and (min-width: 1280px) {
     max-width: none;
     width: 470px;
@@ -19,13 +21,10 @@ export const CounterForm = styled.form`
 export const Input = styled(CouponInput)`
   width: 100%;
   font-size: 14px;
+  text-transform: none;
 
   @media screen and (min-width: 1280px) {
     width: 100%;
-  }
-
-  &::placeholder {
-    text-transform: none;
   }
 `;
 
