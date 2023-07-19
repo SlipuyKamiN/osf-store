@@ -1,4 +1,3 @@
-import salesImagePath from 'images/sales.png';
 import {
   CardDescription,
   CardFollowLink,
