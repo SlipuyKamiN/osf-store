@@ -46,4 +46,8 @@
   &:focus {
     color: #84bc22;
   }
+
+  @media print {
+    display: none;
+  }
 }
