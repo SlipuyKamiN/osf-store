@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { colors, transition } from 'styles/common/vars';
+import salesImagePath from 'images/sales.png';
 
 export const SalesCard = styled.div`
   display: none;
@@ -12,26 +13,31 @@ export const SalesCard = styled.div`
 `;
 
 export const ImageWrapper = styled.div`
-  position: relative;
   width: 100%;
   margin-bottom: 38px;
+  background-image: url(${salesImagePath});
 `;
 
 export const ImageTextWrapper = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: 270px;
+  height: 335px;
+  padding: 65px 20px;
+
+  text-align: center;
+
   color: ${colors.primaryWhite};
 `;
 
 export const Percentage = styled.h2`
   font-size: 96px;
   font-weight: 900;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 `;
 
 export const SaleDescription = styled.p`
+  max-width: 190px;
+  margin: 0 auto;
+
   text-transform: uppercase;
   font-size: 26px;
   line-height: 1.2;

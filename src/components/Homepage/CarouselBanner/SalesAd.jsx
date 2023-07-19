@@ -14,7 +14,6 @@ const SalesAd = () => {
   return (
     <SalesCard>
       <ImageWrapper>
-        <img src={salesImagePath} alt="sales palm" />
         <ImageTextWrapper>
           <Percentage>55%</Percentage>
           <SaleDescription>Summer sales</SaleDescription>
