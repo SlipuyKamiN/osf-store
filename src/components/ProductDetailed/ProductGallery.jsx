@@ -2,7 +2,7 @@ import ImageGallery from 'react-image-gallery';
 import { productDetailsImages } from 'data/productDetails';
 import useWindowDimensions from 'hooks/useWindowDimensions';
 
-const ProductGallery = ({ print = false }) => {
+const ProductGallery = () => {
   const { width } = useWindowDimensions();
   const isMobileScreen = width < 768;
 
@@ -10,7 +10,7 @@ const ProductGallery = ({ print = false }) => {
     <ImageGallery
       additionalClass="product-details"
       items={productDetailsImages}
-      thumbnailPosition={isMobileScreen && !print ? 'bottom' : 'right'}
+      thumbnailPosition={isMobileScreen ? 'bottom' : 'right'}
       showThumbnails={true}
       showPlayButton={false}
       showNav={false}

@@ -5,6 +5,7 @@ import SharedLayout from 'components/SharedLayout/SharedLayout';
 import ErrorPage from 'pages/404/404';
 import Cart from 'pages/Cart/Cart';
 import CategoryLanding from 'pages/CategoryLanding/CategoryLanding';
+import Countdown from 'pages/Countdown/Countdown';
 import Home from 'pages/Home/Home';
 import ProductDetailed from 'pages/ProductDetailed/ProductDetailed';
 import { Navigate, Route, Routes } from 'react-router-dom';
@@ -24,6 +25,7 @@ export const App = () => {
           <Route path="additional-information" element={<AdditionalInfo />} />
           <Route path="reviews" element={<Reviews />} />
         </Route>
+        <Route path="countdown" element={<Countdown />} />
         <Route path="404" element={<ErrorPage />} />
         <Route path="*" element={<Navigate to="404" />}></Route>
       </Route>
