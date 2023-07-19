@@ -1,5 +1,4 @@
-import { CounterInput } from 'components/Global/ItemCounter.styled';
-import { CounterForm, Input, InputWrapper, SubmitButton } from './Form.styled';
+import { CounterForm, Input, SubmitButton } from './Form.styled';
 
 const Form = () => {
   return (
