@@ -42,6 +42,9 @@ const Navigation = () => {
         <NavigationListItem>
           <NavigationLink to="ContactUs">Contact us</NavigationLink>
         </NavigationListItem>
+        <NavigationListItem>
+          <NavigationLink to="countdown">Release</NavigationLink>
+        </NavigationListItem>
       </NavigationList>
       {isServicesOpen && (
         <ServicesWrapper>

@@ -3,11 +3,17 @@ import {
   CouponButton,
   CouponInput,
 } from 'components/ShoppingCart/OrderSummary.styled';
+import { colors } from 'styles/common/vars';
 
 export const CounterForm = styled.form`
   position: relative;
-  width: 470px;
+  max-width: 470px;
   margin: 0 auto;
+
+  @media screen and (min-width: 1280px) {
+    max-width: none;
+    width: 470px;
+  }
 `;
 
 export const Input = styled(CouponInput)`
@@ -33,4 +39,6 @@ export const SubmitButton = styled(CouponButton)`
   height: 26px;
   font-size: 16px;
   font-weight: 900;
+
+  background-color: ${colors.primaryWhite};
 `;

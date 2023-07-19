@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { colors, transition } from 'styles/common/vars';
 
 export const Nav = styled.nav`
-  margin-left: 179px;
+  margin-left: auto;
   @media screen and (max-width: 1280px) {
     display: none;
   }
