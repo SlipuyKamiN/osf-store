@@ -46,19 +46,19 @@ const NavigationMobile = () => {
               <ServicesSubList />
             </li>
             <li key="Company">
-              <NavigationLink>
+              <NavigationLink to="company">
                 Company
                 <CaretDownIcon />
               </NavigationLink>
             </li>
             <li key="Library">
-              <NavigationLink>
+              <NavigationLink to="library">
                 Library
                 <CaretDownIcon />
               </NavigationLink>
             </li>
             <li key="Contact us">
-              <NavigationLink>
+              <NavigationLink to="contact-us">
                 Contact us
                 <CaretDownIcon />
               </NavigationLink>

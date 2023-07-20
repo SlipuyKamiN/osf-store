@@ -84,8 +84,10 @@ export const Select = styled.select`
 
   border: 2px solid RGBA(69, 65, 62, 0.5);
   border-radius: 20px;
-  color: ${colors.fontGray};
   appearance: none;
+
+  color: ${colors.fontGray};
+  background-color: transparent;
 `;
 
 export const ColorPickerButton = styled.input`

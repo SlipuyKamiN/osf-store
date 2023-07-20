@@ -2,7 +2,6 @@ import {
   CardDescription,
   CardFollowLink,
   CardTitle,
-  ImageTextWrapper,
   ImageWrapper,
   Percentage,
   SaleDescription,
@@ -13,10 +12,8 @@ const SalesAd = () => {
   return (
     <SalesCard>
       <ImageWrapper>
-        <ImageTextWrapper>
-          <Percentage>55%</Percentage>
-          <SaleDescription>Summer sales</SaleDescription>
-        </ImageTextWrapper>
+        <Percentage>55%</Percentage>
+        <SaleDescription>Summer sales</SaleDescription>
       </ImageWrapper>
       <CardTitle>Follow us on Facebook</CardTitle>
       <CardDescription>

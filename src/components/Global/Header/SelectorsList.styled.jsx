@@ -21,10 +21,12 @@ export const Select = styled.select`
   width: 54px;
   border: none;
   cursor: pointer;
-  color: ${colors.fontGray};
   opacity: 0.5;
   font-size: 14px;
-`;
+
+  color: ${colors.fontGray};
+  background-color: transparent;
+  `;
 
 export const CaretDownIcon = styled.span`
   position: absolute;

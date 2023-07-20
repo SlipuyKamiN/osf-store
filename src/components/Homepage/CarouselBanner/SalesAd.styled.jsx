@@ -13,19 +13,16 @@ export const SalesCard = styled.div`
 `;
 
 export const ImageWrapper = styled.div`
-  width: 100%;
-  margin-bottom: 38px;
-  background-image: url(${salesImagePath});
-`;
-
-export const ImageTextWrapper = styled.div`
   width: 270px;
   height: 335px;
+  
   padding: 65px 20px;
+  margin-bottom: 38px;
+  border-radius: 6px;
 
   text-align: center;
-
   color: ${colors.primaryWhite};
+  background-image: url(${salesImagePath});
 `;
 
 export const Percentage = styled.h2`
