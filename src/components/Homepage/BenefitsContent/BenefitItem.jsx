@@ -3,6 +3,7 @@ import {
   BenefitDescription,
   BenefitTitle,
 } from './BenefitItem.styled';
+import PropTypes from 'prop-types';
 
 const BenefitItem = ({ benefit: { imageUrl, title, description } }) => {
   return (
@@ -17,3 +18,7 @@ const BenefitItem = ({ benefit: { imageUrl, title, description } }) => {
 };
 
 export default BenefitItem;
+
+BenefitItem.propTypes = {
+  benefit: PropTypes.objectOf(PropTypes.string).isRequired,
+};

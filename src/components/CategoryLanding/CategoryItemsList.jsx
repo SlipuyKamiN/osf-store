@@ -4,6 +4,7 @@ import {
   CategoryListSection,
   LoadMoreButton,
 } from './CategoryItemsList.styled';
+import PropTypes from 'prop-types';
 import PricedTile from 'components/ProductTiles/PricedTile';
 
 const CategoryItemsList = ({ allProducts }) => {
@@ -43,3 +44,7 @@ const CategoryItemsList = ({ allProducts }) => {
 };
 
 export default CategoryItemsList;
+
+CategoryItemsList.propTypes = {
+  allProducts: PropTypes.arrayOf(PropTypes.objectOf).isRequired,
+};

@@ -7,11 +7,11 @@ import {
   BuyNowPrice,
   BuyNowWrapper,
 } from './BuyNowTile.styled';
+import PropTypes from 'prop-types';
 import { useProducts } from 'context/ProductsContext';
 import { notification } from 'components/Global/notification';
 
-const BuyNowTile = ({ item }) => {
-  const { imageUrl, id, title, price } = item;
+const BuyNowTile = ({ item: { imageUrl, id, title, price }, item }) => {
   const { reducer } = useProducts();
 
   const handleAddItem = () => {
@@ -45,3 +45,16 @@ const BuyNowTile = ({ item }) => {
 };
 
 export default BuyNowTile;
+
+BuyNowTile.propTypes = {
+  item: PropTypes.exact({
+    id: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    imageUrl: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    buyNow: PropTypes.bool.isRequired,
+    label: PropTypes.string,
+    description: PropTypes.string,
+    comment: PropTypes.object,
+  }).isRequired,
+};

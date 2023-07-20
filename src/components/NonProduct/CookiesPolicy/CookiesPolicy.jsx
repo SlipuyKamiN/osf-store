@@ -8,9 +8,12 @@ import {
   PolicyLink,
   PolicyTitle,
 } from './CookiesPolicy.styled';
+import PropTypes from 'prop-types';
 import { useState } from 'react';
+import { notification } from 'components/Global/notification';
 
 const modalRoot = document.querySelector('#modal-root');
+
 const checkLocalStorage = () => {
   try {
     const isPolicyAccepted = localStorage.getItem('policyAccepted');
@@ -32,7 +35,8 @@ const CookiesPolicy = ({ toggleCookies }) => {
       localStorage.setItem('policyAccepted', true);
       setIsPolicyAccepted(true);
     } catch (error) {
-      console.log(error);
+      console.warn(error);
+      notification();
     }
   };
 
@@ -69,3 +73,7 @@ const CookiesPolicy = ({ toggleCookies }) => {
 };
 
 export default CookiesPolicy;
+
+CookiesPolicy.propTypes = {
+  toggleCookies: PropTypes.func.isRequired,
+};

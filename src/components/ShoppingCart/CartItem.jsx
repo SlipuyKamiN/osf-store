@@ -9,44 +9,42 @@ import {
   ItemTotalPrice,
   ItemTotalPriceWrapper,
 } from './CartItem.styled';
+import PropTypes from 'prop-types';
 import { useProducts } from 'context/ProductsContext';
 import ItemCounter from 'components/Global/ItemCounter';
 import { notification } from 'components/Global/notification';
 
-const CartItem = ({ item }) => {
-  const [orderQuantity, setOrderQuantity] = useState(item.orderQuantity);
+const CartItem = ({ item: { id, title, price, imageUrl, orderQuantity } }) => {
+  const [itemQunatity, setItemQuantity] = useState(orderQuantity);
   const { reducer } = useProducts();
 
-  const handleUpdateQuantity = quantity => {
-    reducer('cart/updateQuantity', { id: item.id, orderQuantity: quantity });
-    setOrderQuantity(quantity);
+  const handleUpdateQuantity = orderQuantity => {
+    reducer('cart/updateQuantity', { id, orderQuantity });
+    setItemQuantity(orderQuantity);
   };
 
   const handleRemoveItem = () => {
-    reducer('cart/remove', item.id);
+    reducer('cart/remove', id);
 
-    notification(
-      `Item "${item.title}" has been removed from your cart`,
-      'success'
-    );
+    notification(`Item "${title}" has been removed from your cart`, 'success');
   };
 
   return (
     <Item>
       <ItemInfoWrapper>
-        <ItemImage width="96px" src={item.imageUrl} />
+        <ItemImage width="96px" src={imageUrl} />
         <div>
-          <ItemTitle>{item.title}</ItemTitle>
-          <ItemPrice>${item.price}</ItemPrice>
+          <ItemTitle>{title}</ItemTitle>
+          <ItemPrice>${price}</ItemPrice>
         </div>
       </ItemInfoWrapper>
       <ItemTotalPriceWrapper>
         <ItemCounter
-          orderQuantity={orderQuantity}
+          orderQuantity={itemQunatity}
           setOrderQuantity={handleUpdateQuantity}
         />
         <ItemTotalPrice>
-          {`$${Number(item.price) * Number(item.orderQuantity)}`}
+          {`$${Number(price) * Number(orderQuantity)}`}
         </ItemTotalPrice>
         <ItemRemoveButton onClick={handleRemoveItem}>+</ItemRemoveButton>
       </ItemTotalPriceWrapper>
@@ -55,3 +53,17 @@ const CartItem = ({ item }) => {
 };
 
 export default CartItem;
+
+CartItem.propTypes = {
+  item: PropTypes.exact({
+    id: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    imageUrl: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    buyNow: PropTypes.bool,
+    label: PropTypes.string,
+    description: PropTypes.string,
+    comment: PropTypes.object,
+    orderQuantity: PropTypes.number.isRequired,
+  }).isRequired,
+};

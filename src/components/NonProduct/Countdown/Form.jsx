@@ -4,6 +4,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { ErrMessage } from '../LogInModal/LogInModal.styled';
 import { releaseSubscribe } from 'API/API';
+import { notification } from 'components/Global/notification';
 
 export const validationSchema = yup.object().shape({
   email: yup
@@ -20,9 +21,11 @@ const Form = () => {
     try {
       const data = await releaseSubscribe({ email });
 
+      notification('Congrats! You had been succesfully subscribed!', 'success');
       console.table(data);
     } catch (error) {
-      console.log(error);
+      console.warn(error);
+      notification();
     }
 
     reset({ email: '' });

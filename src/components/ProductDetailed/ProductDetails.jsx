@@ -8,6 +8,7 @@ import ProductData from './ProductData';
 import ProductGallery from './ProductGallery';
 import { useRef } from 'react';
 import LoadingSpinner from 'components/Global/LoadingSpinner';
+import PropTypes from 'prop-types';
 
 const ProductDetails = ({ item }) => {
   const componentToPrint = useRef();
@@ -30,3 +31,11 @@ const ProductDetails = ({ item }) => {
 };
 
 export default ProductDetails;
+
+ProductDetails.propTypes = {
+  item: PropTypes.objectOf({
+    title: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    description: PropTypes.string.isRequired,
+  }).isRequired,
+};

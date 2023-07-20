@@ -6,10 +6,10 @@ import {
   PricedCard,
   PricedDescription,
 } from './PricedTile.styled';
+import PropTypes from 'prop-types';
 import { notification } from 'components/Global/notification';
 
-const PricedTile = ({ item }) => {
-  const { imageUrl, title, price } = item;
+const PricedTile = ({ item: { imageUrl, title, price }, item }) => {
   const { reducer } = useProducts();
 
   const handleAddItem = type => {
@@ -51,3 +51,16 @@ const PricedTile = ({ item }) => {
 };
 
 export default PricedTile;
+
+PricedTile.propTypes = {
+  item: PropTypes.exact({
+    id: PropTypes.string,
+    title: PropTypes.string.isRequired,
+    imageUrl: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    buyNow: PropTypes.bool,
+    label: PropTypes.string,
+    description: PropTypes.string,
+    comment: PropTypes.object,
+  }).isRequired,
+};

@@ -2,6 +2,7 @@ import FooterBlockTitle from './FooterBlockTitle';
 import { useState } from 'react';
 import { List } from './BlockList.styled';
 import { ListLink } from './Footer.styled';
+import PropTypes from 'prop-types';
 
 const BlockList = ({ title, listContent, isMobileScreen }) => {
   const [isListOpen, setIsListOpen] = useState(false);
@@ -28,3 +29,9 @@ const BlockList = ({ title, listContent, isMobileScreen }) => {
 };
 
 export default BlockList;
+
+BlockList.propTypes = {
+  title: PropTypes.string.isRequired,
+  listContent: PropTypes.arrayOf(PropTypes.string).isRequired,
+  isMobileScreen: PropTypes.bool,
+};

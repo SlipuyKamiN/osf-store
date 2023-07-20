@@ -12,6 +12,7 @@ import {
   ShareIconsWrapper,
   ShowMoreButton,
 } from './ProductData.styled';
+import PropTypes from 'prop-types';
 import { useState } from 'react';
 import SocialIconsList from 'components/Global/Footer/SocialIconsList';
 import ItemCounter from 'components/Global/ItemCounter';
@@ -90,3 +91,12 @@ const ProductData = ({ item, componentToPrint }) => {
 };
 
 export default ProductData;
+
+ProductData.propTypes = {
+  item: PropTypes.objectOf({
+    title: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    description: PropTypes.string.isRequired,
+  }).isRequired,
+  componentToPrint: PropTypes.objectOf({ current: PropTypes.element }),
+};

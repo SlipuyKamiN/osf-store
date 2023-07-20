@@ -1,5 +1,6 @@
 import { useProducts } from 'context/ProductsContext';
 import { IconsList, IconCounter, IconLink } from './UserBar.styled';
+import PropTypes from 'prop-types';
 import LogInModal from 'components/NonProduct/LogInModal/LogInModal';
 import { useState } from 'react';
 
@@ -37,3 +38,7 @@ const UserBar = ({ mobile = false }) => {
 };
 
 export default UserBar;
+
+UserBar.propTypes = {
+  mobile: PropTypes.bool,
+};

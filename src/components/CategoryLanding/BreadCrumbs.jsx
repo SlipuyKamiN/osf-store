@@ -4,6 +4,7 @@ import {
   HistoryList,
   HistoryListItem,
 } from './BreadCrumbs.styled';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 const BreadCrumbs = ({ padding }) => {
@@ -23,3 +24,7 @@ const BreadCrumbs = ({ padding }) => {
 };
 
 export default BreadCrumbs;
+
+BreadCrumbs.propTypes = {
+  padding: PropTypes.arrayOf(PropTypes.string).isRequired,
+};

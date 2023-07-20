@@ -12,6 +12,7 @@ import {
   ShowPasswordButton,
   SubmitButton,
 } from './LogInModal.styled';
+import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm } from 'react-hook-form';
@@ -104,3 +105,7 @@ const LogInModal = ({ toggleModal }) => {
 };
 
 export default LogInModal;
+
+LogInModal.propTypes = {
+  toggleModal: PropTypes.func.isRequired,
+};

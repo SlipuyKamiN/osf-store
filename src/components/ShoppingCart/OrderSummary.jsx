@@ -16,6 +16,7 @@ import {
   RadioButtonWrapper,
   RadioLabel,
 } from './OrderSummary.styled';
+import PropTypes from 'prop-types';
 
 const OrderSummary = ({ cart }) => {
   const [deliveryOption, setDeliveryOption] = useState('00');
@@ -141,3 +142,7 @@ const OrderSummary = ({ cart }) => {
 };
 
 export default OrderSummary;
+
+OrderSummary.propTypes = {
+  cart: PropTypes.arrayOf(PropTypes.object),
+};

@@ -5,6 +5,7 @@ import {
   Title,
   ViewMoreLink,
 } from './BannerDescription.styled';
+import PropTypes from 'prop-types';
 
 const BannerDescription = ({ contentAlign }) => {
   const location = useLocation();
@@ -24,3 +25,7 @@ const BannerDescription = ({ contentAlign }) => {
 };
 
 export default BannerDescription;
+
+BannerDescription.propTypes = {
+  contentAlign: PropTypes.string.isRequired,
+};

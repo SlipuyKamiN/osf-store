@@ -3,6 +3,7 @@ import {
   CounterInput,
   ItemCounterWrapper,
 } from './ItemCounter.styled';
+import PropTypes from 'prop-types';
 
 const ItemCounter = ({ orderQuantity, setOrderQuantity }) => {
   const handleChangeQuantity = type => {
@@ -52,3 +53,8 @@ const ItemCounter = ({ orderQuantity, setOrderQuantity }) => {
 };
 
 export default ItemCounter;
+
+ItemCounter.propTypes = {
+  orderQuantity: PropTypes.number.isRequired,
+  setOrderQuantity: PropTypes.func.isRequired,
+};

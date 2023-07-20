@@ -5,6 +5,7 @@ import {
   CommentText,
   CommentWrapper,
 } from './CommentedTile.styled';
+import PropTypes from 'prop-types';
 
 const CommentedTile = ({ imageUrl, comment }) => {
   return (
@@ -21,3 +22,8 @@ const CommentedTile = ({ imageUrl, comment }) => {
 };
 
 export default CommentedTile;
+
+CommentedTile.propTypes = {
+  imageUrl: PropTypes.string.isRequired,
+  comment: PropTypes.object.isRequired,
+};

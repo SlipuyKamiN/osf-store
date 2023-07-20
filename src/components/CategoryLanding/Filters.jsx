@@ -7,6 +7,7 @@ import {
   ToggleFilterButton,
   ResultCounter,
 } from './Filters.styled';
+import PropTypes from 'prop-types';
 import useWindowDimensions from 'hooks/useWindowDimensions';
 import { useState } from 'react';
 
@@ -147,3 +148,7 @@ const Filter = ({ allProducts }) => {
 };
 
 export default Filter;
+
+Filter.propTypes = {
+  allProducts: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
