@@ -1,5 +1,4 @@
-import $ from 'jquery';
-
+import { getAllProducts } from 'API/API';
 import { createContext, useContext, useEffect, useState } from 'react';
 
 const ProductsContext = createContext({
@@ -7,8 +6,6 @@ const ProductsContext = createContext({
   wishlist: [],
   cart: [],
 });
-
-const BASE_URL = 'https://osf-store.onrender.com/api/products';
 
 export const useProducts = () => useContext(ProductsContext);
 
@@ -30,13 +27,15 @@ export const ProductsProvider = ({ children }) => {
   const [cart, setCart] = useState(() => checkLocalStorage('cart'));
 
   useEffect(() => {
-    $.ajax(BASE_URL, {
-      type: 'GET',
-      dataType: 'json',
-      async: false,
-    })
-      .then(setAllProducts)
-      .catch(console.log);
+    (async () => {
+      try {
+        const products = await getAllProducts();
+
+        setAllProducts(products);
+      } catch (error) {
+        console.log(error);
+      }
+    })();
   }, []);
 
   useEffect(() => {

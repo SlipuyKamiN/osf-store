@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { ErrMessage } from '../LogInModal/LogInModal.styled';
+import { releaseSubscribe } from 'API/API';
 
 export const validationSchema = yup.object().shape({
   email: yup
@@ -15,8 +16,15 @@ export const validationSchema = yup.object().shape({
 });
 
 const Form = () => {
-  const handleFormSubmit = ({ email }) => {
-    console.table({ email });
+  const handleFormSubmit = async ({ email }) => {
+    try {
+      const data = await releaseSubscribe({ email });
+
+      console.table(data);
+    } catch (error) {
+      console.log(error);
+    }
+
     reset({ email: '' });
   };
 
