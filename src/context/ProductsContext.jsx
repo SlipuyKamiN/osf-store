@@ -47,7 +47,8 @@ export const ProductsProvider = ({ children }) => {
     switch (action) {
       case 'wishlist/add':
         const wishIndex = wishlist.findIndex(({ id }) => id === payload.id);
-        if (wishIndex !== -1) return alert('qwe');
+        if (wishIndex !== -1)
+          return 'This item was already added to your wishlist';
 
         setWishlist(prevState => [...prevState, payload]);
         break;
@@ -58,7 +59,7 @@ export const ProductsProvider = ({ children }) => {
 
       case 'cart/add':
         const itemIndex = cart.findIndex(({ id }) => id === payload.id);
-        if (itemIndex !== -1) return alert('qwe');
+        if (itemIndex !== -1) return 'This item was already added to your cart';
 
         setCart(prevState => [...prevState, payload]);
         break;

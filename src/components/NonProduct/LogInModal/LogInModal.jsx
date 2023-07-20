@@ -16,6 +16,7 @@ import { useEffect, useState } from 'react';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm } from 'react-hook-form';
 import { validationSchema } from './validationSchema';
+import { notification } from 'components/Global/notification';
 
 const modalRoot = document.querySelector('#modal-root');
 
@@ -49,6 +50,7 @@ const LogInModal = ({ toggleModal }) => {
 
   const handleFormSubmit = ({ email, password }) => {
     console.table({ email, password });
+    notification(`Welcome ${email} !`, 'success');
     toggleModal();
     reset({ email: '', password: '' });
   };

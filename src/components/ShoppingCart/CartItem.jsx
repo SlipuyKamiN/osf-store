@@ -11,6 +11,7 @@ import {
 } from './CartItem.styled';
 import { useProducts } from 'context/ProductsContext';
 import ItemCounter from 'components/Global/ItemCounter';
+import { notification } from 'components/Global/notification';
 
 const CartItem = ({ item }) => {
   const [orderQuantity, setOrderQuantity] = useState(item.orderQuantity);
@@ -19,6 +20,15 @@ const CartItem = ({ item }) => {
   const handleUpdateQuantity = quantity => {
     reducer('cart/updateQuantity', { id: item.id, orderQuantity: quantity });
     setOrderQuantity(quantity);
+  };
+
+  const handleRemoveItem = () => {
+    reducer('cart/remove', item.id);
+
+    notification(
+      `Item "${item.title}" has been removed from your cart`,
+      'success'
+    );
   };
 
   return (
@@ -38,13 +48,7 @@ const CartItem = ({ item }) => {
         <ItemTotalPrice>
           {`$${Number(item.price) * Number(item.orderQuantity)}`}
         </ItemTotalPrice>
-        <ItemRemoveButton
-          onClick={() => {
-            reducer('cart/remove', item.id);
-          }}
-        >
-          +
-        </ItemRemoveButton>
+        <ItemRemoveButton onClick={handleRemoveItem}>+</ItemRemoveButton>
       </ItemTotalPriceWrapper>
     </Item>
   );

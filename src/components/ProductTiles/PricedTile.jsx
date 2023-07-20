@@ -6,10 +6,22 @@ import {
   PricedCard,
   PricedDescription,
 } from './PricedTile.styled';
+import { notification } from 'components/Global/notification';
 
 const PricedTile = ({ item }) => {
   const { imageUrl, title, price } = item;
   const { reducer } = useProducts();
+
+  const handleAddItem = type => {
+    const response = reducer(`${type}/add`, { ...item, orderQuantity: 1 });
+
+    if (response) return notification(response);
+
+    notification(
+      `Item "${item.title}" has been added to your ${type}`,
+      'success'
+    );
+  };
 
   return (
     <PricedCard>
@@ -22,18 +34,14 @@ const PricedTile = ({ item }) => {
             <AddButton
               type="button"
               className="icon-plus"
-              onClick={() => {
-                reducer('cart/add', { ...item, orderQuantity: 1 });
-              }}
+              onClick={() => handleAddItem('cart')}
             ></AddButton>
           </li>
           <li>
             <AddButton
               type="button"
               className="icon-heart-red"
-              onClick={() => {
-                reducer('wishlist/add', { ...item, orderQuantity: 1 });
-              }}
+              onClick={() => handleAddItem('wishlist')}
             ></AddButton>
           </li>
         </ul>

@@ -16,6 +16,7 @@ import { useState } from 'react';
 import SocialIconsList from 'components/Global/Footer/SocialIconsList';
 import ItemCounter from 'components/Global/ItemCounter';
 import ReactToPrint from 'react-to-print';
+import { notification } from 'components/Global/notification';
 
 const ProductData = ({ item, componentToPrint }) => {
   const { reducer } = useProducts();
@@ -30,10 +31,11 @@ const ProductData = ({ item, componentToPrint }) => {
   };
 
   const handleAddToCart = () => {
-    reducer('cart/add', {
-      ...item,
-      orderQuantity,
-    });
+    const response = reducer(`cart/add`, { ...item, orderQuantity });
+
+    if (response) return notification(response);
+
+    notification(`Item "${item.title}" has been added to your cart`, 'success');
   };
 
   return (

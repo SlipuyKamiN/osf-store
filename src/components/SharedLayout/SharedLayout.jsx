@@ -6,6 +6,7 @@ import UserBar from 'components/Global/Header/UserBar';
 import CookiesPolicy from 'components/NonProduct/CookiesPolicy/CookiesPolicy';
 import { Suspense, useEffect, useState } from 'react';
 import LoadingSpinner from 'components/Global/LoadingSpinner';
+import { ToastContainer } from 'react-toastify';
 
 const SharedLayout = () => {
   const [showCookiesPolicy, setShowCookiesPolicy] = useState(false);
@@ -29,6 +30,7 @@ const SharedLayout = () => {
       <Footer />
       <UserBar mobile />
       {showCookiesPolicy && <CookiesPolicy toggleCookies={toggleCookies} />}
+      <ToastContainer />
     </Container>
   );
 };
