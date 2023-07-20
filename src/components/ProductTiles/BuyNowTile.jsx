@@ -14,7 +14,7 @@ const BuyNowTile = ({ item }) => {
   return (
     <BasicCard>
       <Link to={`product-detailed/${id}/${title}/description`}>
-        <Image src={require(`../../${imageUrl}`)} alt={title} width="270px" />
+        <Image src={imageUrl} alt={title} width="270px" />
       </Link>
       <BuyNowDescription>
         <BuyNowLink to={`product-detailed/${id}/${title}/description`}>

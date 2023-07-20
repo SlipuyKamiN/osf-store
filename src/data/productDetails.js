@@ -1,18 +1,26 @@
 export const productDetailsImages = [
   {
-    original: require('images/product-black-front.jpg'),
-    thumbnail: require('images/product-black-front.jpg'),
+    original:
+      ' https://osf-store.onrender.com/api/products/images/product-black-front.jpg',
+    thumbnail:
+      ' https://osf-store.onrender.com/api/products/images/product-black-front.jpg',
   },
   {
-    original: require('images/product-black-back.jpg'),
-    thumbnail: require('images/product-black-back.jpg'),
+    original:
+      ' https://osf-store.onrender.com/api/products/images/product-black-back.jpg',
+    thumbnail:
+      ' https://osf-store.onrender.com/api/products/images/product-black-back.jpg',
   },
   {
-    original: require('images/product-sky-blue-front.jpg'),
-    thumbnail: require('images/product-sky-blue-front.jpg'),
+    original:
+      ' https://osf-store.onrender.com/api/products/images/product-sky-blue-front.jpg',
+    thumbnail:
+      ' https://osf-store.onrender.com/api/products/images/product-sky-blue-front.jpg',
   },
   {
-    original: require('images/product-sky-blue-back.jpg'),
-    thumbnail: require('images/product-sky-blue-back.jpg'),
+    original:
+      ' https://osf-store.onrender.com/api/products/images/product-sky-blue-back.jpg',
+    thumbnail:
+      ' https://osf-store.onrender.com/api/products/images/product-sky-blue-back.jpg',
   },
 ];

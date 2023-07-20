@@ -1,19 +1,19 @@
 import BannerDescription from 'components/Homepage/CarouselBanner/BannerDescription';
-import bannerLeft from 'images/carousel-1.png';
-import bannerCenter from 'images/carousel-2.jpg';
-import bannerRight from 'images/carousel-3.jpg';
 
 export const carouselBannerImages = [
   {
-    original: bannerLeft,
+    original:
+      'https://osf-store.onrender.com/api/products/images/carousel-1.png',
     description: <BannerDescription contentAlign={'left'} />,
   },
   {
-    original: bannerCenter,
+    original:
+      'https://osf-store.onrender.com/api/products/images/carousel-2.jpg',
     description: <BannerDescription contentAlign={'center'} />,
   },
   {
-    original: bannerRight,
+    original:
+      'https://osf-store.onrender.com/api/products/images/carousel-3.jpg',
     description: <BannerDescription contentAlign={'right'} />,
   },
 ];

@@ -1,5 +1,4 @@
 import $ from 'jquery';
-import data from '../data/productItems.json';
 
 import { createContext, useContext, useEffect, useState } from 'react';
 
@@ -9,7 +8,7 @@ const ProductsContext = createContext({
   cart: [],
 });
 
-const BASE_URL = './productItems.json';
+const BASE_URL = 'https://osf-store.onrender.com/api/products';
 
 export const useProducts = () => useContext(ProductsContext);
 
@@ -26,7 +25,7 @@ const checkLocalStorage = key => {
 };
 
 export const ProductsProvider = ({ children }) => {
-  const [allProducts, setAllProducts] = useState(data);
+  const [allProducts, setAllProducts] = useState([]);
   const [wishlist, setWishlist] = useState(() => checkLocalStorage('wishlist'));
   const [cart, setCart] = useState(() => checkLocalStorage('cart'));
 

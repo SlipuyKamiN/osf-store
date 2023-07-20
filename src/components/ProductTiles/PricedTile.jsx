@@ -13,7 +13,7 @@ const PricedTile = ({ item }) => {
 
   return (
     <PricedCard>
-      <Image src={require(`../../${imageUrl}`)} alt={title} width="270px" />
+      <Image src={imageUrl} alt={title} width="270px" />
       <PricedDescription>
         <BasicTitle>{title}</BasicTitle>
         <Price>$ {price}</Price>
