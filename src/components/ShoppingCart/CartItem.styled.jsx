@@ -62,6 +62,8 @@ export const ItemTotalPriceWrapper = styled.div`
 
   @media screen and (min-width: 1280px) {
     align-items: center;
+    justify-content: space-between;
+    width: 368px;
 
     gap: 59px;
   }
