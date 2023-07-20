@@ -4,7 +4,8 @@ import { Outlet } from 'react-router-dom';
 import { Container } from './SharedLayout.styled';
 import UserBar from 'components/Global/Header/UserBar';
 import CookiesPolicy from 'components/NonProduct/CookiesPolicy/CookiesPolicy';
-import { useEffect, useState } from 'react';
+import { Suspense, useEffect, useState } from 'react';
+import LoadingSpinner from 'components/Global/LoadingSpinner';
 
 const SharedLayout = () => {
   const [showCookiesPolicy, setShowCookiesPolicy] = useState(false);
@@ -22,7 +23,9 @@ const SharedLayout = () => {
   return (
     <Container>
       <Header />
-      <Outlet />
+      <Suspense fallback={<LoadingSpinner />}>
+        <Outlet />
+      </Suspense>
       <Footer />
       <UserBar mobile />
       {showCookiesPolicy && <CookiesPolicy toggleCookies={toggleCookies} />}

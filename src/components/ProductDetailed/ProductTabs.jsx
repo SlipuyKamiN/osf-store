@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import {
   TabInfoWrapper,
   TabLink,
@@ -6,6 +7,7 @@ import {
   TabsSection,
 } from './ProductTabs.styled';
 import { Outlet } from 'react-router-dom';
+import LoadingSpinner from 'components/Global/LoadingSpinner';
 
 const ProductTabs = () => {
   return (
@@ -22,7 +24,9 @@ const ProductTabs = () => {
         </TabListItem>
       </TabsList>
       <TabInfoWrapper>
-        <Outlet />
+        <Suspense fallback={<LoadingSpinner />}>
+          <Outlet />
+        </Suspense>
       </TabInfoWrapper>
     </TabsSection>
   );

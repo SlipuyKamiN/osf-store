@@ -24,7 +24,7 @@ const CartItem = ({ item }) => {
   return (
     <Item>
       <ItemInfoWrapper>
-        <ItemImage width="96px" src={require(`../../${item.imageUrl}`)} />
+        <ItemImage width="96px" src={item.imageUrl} />
         <div>
           <ItemTitle>{item.title}</ItemTitle>
           <ItemPrice>${item.price}</ItemPrice>

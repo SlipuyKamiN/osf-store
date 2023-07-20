@@ -1,14 +1,25 @@
-import AdditionalInfo from 'components/ProductDetailed/ProductTabs/AdditionalInfo';
-import Description from 'components/ProductDetailed/ProductTabs/Description';
-import Reviews from 'components/ProductDetailed/ProductTabs/Reviews';
-import SharedLayout from 'components/SharedLayout/SharedLayout';
-import ErrorPage from 'pages/404/404';
-import Cart from 'pages/Cart/Cart';
-import CategoryLanding from 'pages/CategoryLanding/CategoryLanding';
-import Countdown from 'pages/Countdown/Countdown';
-import Home from 'pages/Home/Home';
-import ProductDetailed from 'pages/ProductDetailed/ProductDetailed';
 import { Navigate, Route, Routes } from 'react-router-dom';
+import { lazy } from 'react';
+import SharedLayout from 'components/SharedLayout/SharedLayout';
+const AdditionalInfo = lazy(() =>
+  import('components/ProductDetailed/ProductTabs/AdditionalInfo')
+);
+const Description = lazy(() =>
+  import('components/ProductDetailed/ProductTabs/Description')
+);
+const Reviews = lazy(() =>
+  import('components/ProductDetailed/ProductTabs/Reviews')
+);
+const ErrorPage = lazy(() => import('pages/404/404'));
+const Cart = lazy(() => import('pages/Cart/Cart'));
+const CategoryLanding = lazy(() =>
+  import('pages/CategoryLanding/CategoryLanding')
+);
+const Countdown = lazy(() => import('pages/Countdown/Countdown'));
+const Home = lazy(() => import('pages/Home/Home'));
+const ProductDetailed = lazy(() =>
+  import('pages/ProductDetailed/ProductDetailed')
+);
 
 export const App = () => {
   return (
