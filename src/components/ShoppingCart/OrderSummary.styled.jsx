@@ -69,8 +69,9 @@ export const Button = styled.button`
 
   &:hover,
   &:focus {
-    color: ${colors.accentBlue};
-    border-color: ${colors.accentBlue};
+    color: ${colors.primaryWhite};
+    border-color: ${colors.accentGreen};
+    background-color: ${colors.accentGreen};
   }
 `;
 
@@ -98,8 +99,8 @@ export const ProceedButton = styled(Button)`
 
   &:hover,
   &:focus {
-    color: ${colors.primaryWhite};
-    background-color: ${colors.accentBlue};
+    color: ${colors.accentGreen};
+    background-color: ${colors.primaryWhite};
   }
 
   @media screen and (min-width: 1280px) {
