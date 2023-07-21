@@ -27,6 +27,7 @@ const FeaturedProducts = () => {
         modules={[Navigation, Autoplay]}
         slidesPerView={4}
         slidesPerGroup={4}
+        speed={1000}
         autoplay={{ delay: 5000 }}
         rewind={true}
       >
