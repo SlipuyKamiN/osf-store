@@ -19,11 +19,14 @@ import { useForm } from 'react-hook-form';
 import { validationSchema } from './validationSchema';
 import { notification } from 'components/Global/notification';
 import { registerUser } from 'API/API';
+import { colors } from 'styles/common/vars';
+import { RotatingLines } from 'react-loader-spinner';
 
 const modalRoot = document.querySelector('#modal-root');
 
 const LogInModal = ({ toggleModal }) => {
   const [showPassword, setShowPassword] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const {
     register,
     handleSubmit,
@@ -52,18 +55,19 @@ const LogInModal = ({ toggleModal }) => {
 
   const handleFormSubmit = async ({ email, password }) => {
     try {
+      setIsLoading(true);
       const data = await registerUser({ email, password });
 
-      notification('Congrats! You had been succesfully registered!', 'success');
+      notification(`Welcome ${email} !`, 'success');
+      toggleModal();
+      reset({ email: '', password: '' });
       console.table(data);
     } catch (error) {
       console.warn(error);
       notification();
+    } finally {
+      setIsLoading(false);
     }
-
-    notification(`Welcome ${email} !`, 'success');
-    toggleModal();
-    reset({ email: '', password: '' });
   };
 
   useEffect(() => {
@@ -104,7 +108,13 @@ const LogInModal = ({ toggleModal }) => {
             onClick={toggleShowPassword}
           />
         </InputWrapper>
-        <SubmitButton type="submit">Login</SubmitButton>
+        <SubmitButton type="submit" disabled={isLoading}>
+          {isLoading ? (
+            <RotatingLines strokeColor={colors.primaryWhite} width="24px" />
+          ) : (
+            'Login'
+          )}
+        </SubmitButton>
         <RegisterLink to="/" data-close-modal>
           I don`t have an account
         </RegisterLink>
