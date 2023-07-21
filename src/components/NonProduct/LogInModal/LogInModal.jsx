@@ -18,6 +18,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm } from 'react-hook-form';
 import { validationSchema } from './validationSchema';
 import { notification } from 'components/Global/notification';
+import { registerUser } from 'API/API';
 
 const modalRoot = document.querySelector('#modal-root');
 
@@ -49,8 +50,17 @@ const LogInModal = ({ toggleModal }) => {
     }
   };
 
-  const handleFormSubmit = ({ email, password }) => {
-    console.table({ email, password });
+  const handleFormSubmit = async ({ email, password }) => {
+    try {
+      const data = await registerUser({ email, password });
+
+      notification('Congrats! You had been succesfully registered!', 'success');
+      console.table(data);
+    } catch (error) {
+      console.warn(error);
+      notification();
+    }
+
     notification(`Welcome ${email} !`, 'success');
     toggleModal();
     reset({ email: '', password: '' });

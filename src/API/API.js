@@ -14,6 +14,19 @@ export const getAllProducts = async () => {
 export const releaseSubscribe = async body => {
   const data = await $.post(
     {
+      url: `${BASE_URL}/subscribers`,
+      dataType: 'json',
+      contentType: 'application/json; charset=UTF-8',
+    },
+    JSON.stringify(body)
+  );
+
+  return data;
+};
+
+export const registerUser = async body => {
+  const data = await $.post(
+    {
       url: `${BASE_URL}/users`,
       dataType: 'json',
       contentType: 'application/json; charset=UTF-8',
