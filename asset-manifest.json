@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/osf-store/static/css/main.c41936e3.css",
+    "main.css": "/osf-store/static/css/main.1f02bc94.css",
     "main.js": "/osf-store/static/js/main.feea94cd.js",
     "static/js/5.b9f3680a.chunk.js": "/osf-store/static/js/5.b9f3680a.chunk.js",
     "static/js/312.8b84f7fd.chunk.js": "/osf-store/static/js/312.8b84f7fd.chunk.js",
@@ -28,7 +28,7 @@
     "static/media/icomoon.ttf?nz1qhb": "/osf-store/static/media/icomoon.63b6c533f0be4e30cd20.ttf",
     "static/media/comment.svg": "/osf-store/static/media/comment.97a5f8932e30029b221811190ca6d207.svg",
     "index.html": "/osf-store/index.html",
-    "main.c41936e3.css.map": "/osf-store/static/css/main.c41936e3.css.map",
+    "main.1f02bc94.css.map": "/osf-store/static/css/main.1f02bc94.css.map",
     "main.feea94cd.js.map": "/osf-store/static/js/main.feea94cd.js.map",
     "5.b9f3680a.chunk.js.map": "/osf-store/static/js/5.b9f3680a.chunk.js.map",
     "312.8b84f7fd.chunk.js.map": "/osf-store/static/js/312.8b84f7fd.chunk.js.map",
@@ -47,7 +47,7 @@
     "146.4cfafaba.chunk.js.map": "/osf-store/static/js/146.4cfafaba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c41936e3.css",
+    "static/css/main.1f02bc94.css",
     "static/js/main.feea94cd.js"
   ]
 }
