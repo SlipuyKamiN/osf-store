@@ -93,10 +93,16 @@ const ProductData = ({ item, componentToPrint }) => {
 export default ProductData;
 
 ProductData.propTypes = {
-  item: PropTypes.objectOf({
+  item: PropTypes.exact({
+    id: PropTypes.string,
     title: PropTypes.string.isRequired,
+    imageUrl: PropTypes.string,
     price: PropTypes.number.isRequired,
+    buyNow: PropTypes.bool,
+    label: PropTypes.string,
     description: PropTypes.string.isRequired,
+    comment: PropTypes.object,
+    orderQuantity: PropTypes.number,
   }).isRequired,
-  componentToPrint: PropTypes.objectOf({ current: PropTypes.element }),
+  componentToPrint: PropTypes.exact({ current: PropTypes.object }),
 };

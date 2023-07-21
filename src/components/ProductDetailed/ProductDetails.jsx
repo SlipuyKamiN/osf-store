@@ -33,9 +33,15 @@ const ProductDetails = ({ item }) => {
 export default ProductDetails;
 
 ProductDetails.propTypes = {
-  item: PropTypes.objectOf({
+  item: PropTypes.exact({
+    id: PropTypes.string,
     title: PropTypes.string.isRequired,
+    imageUrl: PropTypes.string,
     price: PropTypes.number.isRequired,
+    buyNow: PropTypes.bool,
+    label: PropTypes.string,
     description: PropTypes.string.isRequired,
-  }).isRequired,
+    comment: PropTypes.object,
+    orderQuantity: PropTypes.number,
+  }),
 };
