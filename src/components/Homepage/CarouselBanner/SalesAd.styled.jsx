@@ -15,7 +15,7 @@ export const SalesCard = styled.div`
 export const ImageWrapper = styled.div`
   width: 270px;
   height: 335px;
-  
+
   padding: 65px 20px;
   margin-bottom: 38px;
   border-radius: 6px;
@@ -68,11 +68,12 @@ export const CardFollowLink = styled.a`
   border: 2px solid ${colors.accentBlue};
   color: ${colors.accentBlue};
 
-  transition: color ${transition.duration}, border-color ${transition.duration};
+  transition: color ${transition.duration},
+    background-color ${transition.duration};
 
   &:hover,
   &:focus {
-    color: ${colors.accentGreen};
-    border-color: ${colors.accentGreen};
+    color: ${colors.primaryWhite};
+    background-color: ${colors.accentBlue};
   }
 `;

@@ -3,8 +3,8 @@ import { colors } from 'styles/common/vars';
 import { SectionTitle } from '../PopularItems/PopularItems.styled';
 
 export const BenefitsSection = styled.section`
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   background-color: ${colors.fontGray};
 
   @media screen and (min-width: 1280px) {

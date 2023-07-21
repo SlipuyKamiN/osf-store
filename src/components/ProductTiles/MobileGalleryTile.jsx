@@ -1,6 +1,5 @@
 import { BasicDescription, BasicTitle, Image } from './BasicTile.styled';
-import { MobileCard } from './MobileGalleryTile.styled';
-import { Price } from './PricedTile.styled';
+import { MobileCard, MobileItemPrice } from './MobileGalleryTile.styled';
 import PropTypes from 'prop-types';
 
 const MobileGalleryTile = ({ item: { imageUrl, title, price } }) => {
@@ -9,7 +8,7 @@ const MobileGalleryTile = ({ item: { imageUrl, title, price } }) => {
       <Image src={imageUrl} alt={title} width="270px" />
       <BasicDescription>
         <BasicTitle>{title}</BasicTitle>
-        <Price>$ {price}</Price>
+        <MobileItemPrice>$ {price}</MobileItemPrice>
       </BasicDescription>
     </MobileCard>
   );

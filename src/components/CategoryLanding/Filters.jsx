@@ -6,6 +6,7 @@ import {
   SelectWrapper,
   ToggleFilterButton,
   ResultCounter,
+  ColorPickerWrapper,
 } from './Filters.styled';
 import PropTypes from 'prop-types';
 import useWindowDimensions from 'hooks/useWindowDimensions';
@@ -44,7 +45,7 @@ const Filter = ({ allProducts }) => {
             </SelectWrapper>
             <SelectWrapper>
               <label htmlFor="color">Color</label>
-              <div>
+              <ColorPickerWrapper>
                 <ColorPickerButton
                   onChange={handleColorChange}
                   checked={selectedColor === '#FFFFFF'}
@@ -101,7 +102,7 @@ const Filter = ({ allProducts }) => {
                   name="color"
                   value="#EFEAD7"
                 />
-              </div>
+              </ColorPickerWrapper>
             </SelectWrapper>
           </div>
           <div>

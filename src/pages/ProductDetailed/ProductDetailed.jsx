@@ -1,4 +1,5 @@
 import BreadCrumbs from 'components/CategoryLanding/BreadCrumbs';
+import BenefitsContent from 'components/Homepage/BenefitsContent/BenefitsContent';
 import PopularItems from 'components/ProductDetailed/PopularItems';
 import ProductDetails from 'components/ProductDetailed/ProductDetails';
 import { ProductDetailedMain } from 'components/ProductDetailed/ProductDetails.styled';
@@ -12,10 +13,11 @@ const ProductDetailed = () => {
 
   return (
     <ProductDetailedMain>
-      <BreadCrumbs padding={['26px 0 0', '48px 0 0']} />
+      <BreadCrumbs padding={['26px 44px 0', '48px 0 0']} />
       <ProductDetails item={allProducts.find(({ id }) => id === productId)} />
       <PopularItems />
       <ScrollToTop />
+      <BenefitsContent />
     </ProductDetailedMain>
   );
 };

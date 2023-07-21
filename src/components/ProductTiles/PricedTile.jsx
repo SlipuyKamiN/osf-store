@@ -1,15 +1,20 @@
 import { useProducts } from 'context/ProductsContext';
-import { BasicTitle, Image } from './BasicTile.styled';
+import { Image } from './BasicTile.styled';
 import {
   AddButton,
   Price,
   PricedCard,
   PricedDescription,
+  PricedTitle,
 } from './PricedTile.styled';
 import PropTypes from 'prop-types';
 import { notification } from 'components/Global/notification';
 
-const PricedTile = ({ item: { imageUrl, title, price }, item }) => {
+const PricedTile = ({
+  item: { imageUrl, title, price },
+  item,
+  className = null,
+}) => {
   const { reducer } = useProducts();
 
   const handleAddItem = type => {
@@ -24,10 +29,10 @@ const PricedTile = ({ item: { imageUrl, title, price }, item }) => {
   };
 
   return (
-    <PricedCard>
+    <PricedCard className={className}>
       <Image src={imageUrl} alt={title} width="270px" />
       <PricedDescription>
-        <BasicTitle>{title}</BasicTitle>
+        <PricedTitle>{title}</PricedTitle>
         <Price>$ {price}</Price>
         <ul className="overlay">
           <li>
@@ -63,4 +68,5 @@ PricedTile.propTypes = {
     description: PropTypes.string,
     comment: PropTypes.object,
   }).isRequired,
+  className: PropTypes.string,
 };

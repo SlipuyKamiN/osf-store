@@ -31,7 +31,7 @@ const CategoryItemsList = ({ allProducts }) => {
     <CategoryListSection>
       <CategoryList>
         {itemsToRender.map(item => (
-          <PricedTile key={item.id} item={item} style={{ color: 'tomato' }} />
+          <PricedTile key={item.id} item={item} className="price-gray" />
         ))}
       </CategoryList>
       {!isLastPage && (

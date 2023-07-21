@@ -5,6 +5,7 @@ import { colors, transition } from 'styles/common/vars';
 
 export const ProductPrice = styled.h2`
   font-size: 31px;
+  font-weight: 900;
   margin-bottom: 28px;
 
   @media screen and (min-width: 1280px) {
@@ -90,9 +91,10 @@ export const ShowMoreButton = styled.button`
   border: none;
   padding: 0;
 
+  font-size: 16px;
+
   &:hover,
   &:focus {
-    color: ${colors.accentBlue};
     text-decoration: underline;
   }
 `;
@@ -119,11 +121,18 @@ export const PrintButton = styled.button`
 
 export const Description = styled.p`
   margin-bottom: 12px;
+  line-height: 1.5;
 `;
 
 export const ShareIconsWrapper = styled.div`
   display: flex;
   gap: 32px;
+
+  font-size: 14px;
+
+  span {
+    opacity: 0.5;
+  }
 
   ul {
     margin: 0;

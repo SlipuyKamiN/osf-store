@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom';
 import { colors, transition } from 'styles/common/vars';
 
 export const Nav = styled.nav`
+  display: none;
   margin-left: auto;
-  @media screen and (max-width: 1280px) {
-    display: none;
+  @media screen and (min-width: 1280px) {
+    display: block;
   }
 `;
 

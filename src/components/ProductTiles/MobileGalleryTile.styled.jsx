@@ -1,5 +1,7 @@
 import styled from '@emotion/styled';
 import { BasicCard } from './BasicTile.styled';
+import { Price } from './PricedTile.styled';
+import { colors } from 'styles/common/vars';
 
 export const MobileCard = styled(BasicCard)`
   width: 100%;
@@ -8,4 +10,8 @@ export const MobileCard = styled(BasicCard)`
   &::marker {
     display: none;
   }
+`;
+
+export const MobileItemPrice = styled(Price)`
+  color: ${colors.priceGrayColor};
 `;

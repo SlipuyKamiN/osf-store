@@ -25,7 +25,7 @@ export const BuyNowWrapper = styled.div`
 
 export const BuyNowPrice = styled(Link)`
   width: 50%;
-  color: ${colors.accentGreen};
+  color: ${colors.priceBuyNow};
 `;
 
 export const BuyNowButton = styled.button`

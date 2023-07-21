@@ -17,7 +17,7 @@ export const HistoryList = styled.ul`
 
   font-size: 13px;
 
-  color: ${colors.accentGreen};
+  color: ${colors.breadCrumbsGreen};
 `;
 
 export const HistoryListItem = styled.li`

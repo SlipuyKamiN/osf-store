@@ -29,13 +29,14 @@
 }
 
 .popular-items .image-gallery-bullets {
-  bottom: -31px;
+  bottom: -48px;
 
   .image-gallery-bullet {
     padding: 4px;
     margin: 5px 10px;
     border: 3px solid transparent;
     background-color: #ffffff99;
+    box-shadow: none;
 
     &.active {
       border: 3px solid #ffffff;

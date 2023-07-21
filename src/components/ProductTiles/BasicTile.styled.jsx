@@ -29,6 +29,8 @@ export const BasicDescription = styled.div`
 `;
 
 export const BasicTitle = styled.h4`
+  font-size: 16px;
+  font-weight: 400;
   color: ${colors.fontGray};
 `;
 

@@ -25,11 +25,12 @@ export const LoadMoreButton = styled.button`
   color: ${colors.desert};
   border: 2px solid ${colors.desert};
   background-color: transparent;
-  transition: color ${transition.duration}, border-color ${transition.duration};
+  transition: background-color ${transition.duration},
+    color ${transition.duration};
 
   &:hover,
   &:focus {
-    color: ${colors.accentGreen};
-    border-color: ${colors.accentGreen};
+    color: ${colors.primaryBlack};
+    background-color: ${colors.accentGreen};
   }
 `;

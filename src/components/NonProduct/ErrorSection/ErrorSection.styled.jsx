@@ -122,7 +122,7 @@ export const SearchInput = styled.input`
 export const SearchButton = styled.button`
   position: absolute;
   right: 13px;
-  bottom: 6px;
+  bottom: 8px;
 
   background-color: transparent;
   border: none;

@@ -2,14 +2,14 @@ import styled from '@emotion/styled';
 import { colors } from 'styles/common/vars';
 
 export const SelectList = styled.ul`
-  display: flex;
+  display: none;
   align-items: center;
   margin-left: 46px;
   padding-bottom: 9px;
   gap: 31px;
 
-  @media screen and (max-width: 1280px) {
-    display: none;
+  @media screen and (min-width: 1280px) {
+    display: flex;
   }
 
   li {
@@ -26,7 +26,7 @@ export const Select = styled.select`
 
   color: ${colors.fontGray};
   background-color: transparent;
-  `;
+`;
 
 export const CaretDownIcon = styled.span`
   position: absolute;

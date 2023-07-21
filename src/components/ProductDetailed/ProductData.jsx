@@ -70,7 +70,7 @@ const ProductData = ({ item, componentToPrint }) => {
               setLimitText(!limitText);
             }}
           >
-            {limitText ? 'Show less' : 'Show more'}
+            {limitText ? 'Read less' : 'Read more'}
           </ShowMoreButton>
         </li>
         <li>
@@ -83,7 +83,7 @@ const ProductData = ({ item, componentToPrint }) => {
         </li>
       </ButtonsList>
       <ShareIconsWrapper>
-        Share
+        <span>Share</span>
         <SocialIconsList />
       </ShareIconsWrapper>
     </ProductInfo>

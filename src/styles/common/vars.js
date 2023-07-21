@@ -3,6 +3,7 @@ export const colors = {
   accentBlue: '#3a5b96',
   primaryBg: '#262a32',
   desertBg: '#F2EDEA',
+  productDetailedBg: '#F1EDEA',
   counterBg: '#F1F1F1',
   desert: '#e8e2d6',
   gray: '#999999',
@@ -11,7 +12,12 @@ export const colors = {
   primaryWhite: '#ffffff',
   primaryBlack: '#000000',
   priceColor: '#011847',
+  priceGrayColor: '#BDC3C7',
+  priceBuyNow: '#24C36C',
+  pricedCardTitle: '#2C3E50',
   benefitsText: '#868380',
+  breadCrumbsGreen: '#87C440',
+  hideFilterGreen: '#8DC73E',
 };
 
 export const transition = {

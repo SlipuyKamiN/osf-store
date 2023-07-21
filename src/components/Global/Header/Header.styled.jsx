@@ -35,12 +35,12 @@ export const HeaderWrapper = styled.div`
 `;
 
 export const PageLogoWrapper = styled.a`
-  display: flex;
+  display: none;
   align-items: center;
   gap: 10px;
 
-  @media screen and (max-width: 1280px) {
-    display: none;
+  @media screen and (min-width: 1280px) {
+    display: flex;
   }
 `;
 

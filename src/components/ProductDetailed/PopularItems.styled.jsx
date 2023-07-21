@@ -3,8 +3,8 @@ import { colors } from 'styles/common/vars';
 
 export const PopularItemsSection = styled.section`
   padding-top: 20px;
-  padding-bottom: 64px;
-  background-color: ${colors.desert};
+  padding-bottom: 72px;
+  background-color: ${colors.productDetailedBg};
 
   @media screen and (min-width: 1280px) {
     padding-top: 26px;
@@ -20,7 +20,8 @@ export const SectionTitle = styled.h2`
 
   margin-bottom: 24px;
 
-  font-size: 16px;
+  font-size: 18px;
+  font-weight: 900;
   text-transform: uppercase;
 
   @media screen and (min-width: 1280px) {

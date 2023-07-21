@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { colors } from 'styles/common/vars';
 
 export const ProductDetailedMain = styled.main`
-  background-color: ${colors.desert};
+  background-color: ${colors.productDetailedBg};
 `;
 
 export const ProductDetailsSection = styled.section`

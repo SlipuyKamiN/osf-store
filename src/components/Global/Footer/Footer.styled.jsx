@@ -8,7 +8,7 @@ export const FooterWrapper = styled.footer`
   gap: 24px;
   width: 100%;
   padding-top: 24px;
-  padding-bottom: 67px;
+  padding-bottom: 118px;
 
   color: ${colors.fontGray};
   background-color: ${colors.primaryWhite};
@@ -48,7 +48,7 @@ export const BlockTitle = styled.button`
 
   text-transform: uppercase;
   font-size: inherit;
-  font-weight: 600;
+  font-weight: 700;
 `;
 
 export const ListLink = styled(Link)`

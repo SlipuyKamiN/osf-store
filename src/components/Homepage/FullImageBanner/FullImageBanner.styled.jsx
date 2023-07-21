@@ -5,8 +5,8 @@ import { colors } from 'styles/common/vars';
 export const BannerSection = styled.section`
   width: 100%;
   height: 185px;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 
   background-image: url(${bgImagePath});
   background-repeat: no-repeat;

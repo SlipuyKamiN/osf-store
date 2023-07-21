@@ -1,8 +1,12 @@
 import styled from '@emotion/styled';
-import { BasicCard, BasicDescription } from './BasicTile.styled';
+import { BasicCard, BasicDescription, BasicTitle } from './BasicTile.styled';
 import { colors, transition } from 'styles/common/vars';
 
 export const PricedCard = styled(BasicCard)`
+  &.price-gray p {
+    color: ${colors.priceGrayColor};
+  }
+
   &:hover,
   &:focus {
     .overlay {
@@ -10,6 +14,10 @@ export const PricedCard = styled(BasicCard)`
       transform: translateY(0);
     }
   }
+`;
+
+export const PricedTitle = styled(BasicTitle)`
+  color: ${colors.pricedCardTitle};
 `;
 
 export const PricedDescription = styled(BasicDescription)`
@@ -58,5 +66,6 @@ export const AddButton = styled.button`
 `;
 
 export const Price = styled.p`
-  color: #011847;
+  font-size: 14px;
+  color: ${colors.priceColor};
 `;

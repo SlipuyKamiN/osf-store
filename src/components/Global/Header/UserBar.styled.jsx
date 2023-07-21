@@ -3,14 +3,16 @@ import { Link } from 'react-router-dom';
 import { colors, transition } from 'styles/common/vars';
 
 export const IconsList = styled.ul`
-  display: flex;
+  display: none;
   align-items: center;
   margin-left: 62px;
-  @media screen and (max-width: 1280px) {
-    display: none;
+  @media screen and (min-width: 1280px) {
+    display: flex;
   }
 
   &.mobile {
+    display: flex;
+    justify-content: center;
     position: fixed;
     z-index: 9;
     bottom: 0;
@@ -19,13 +21,17 @@ export const IconsList = styled.ul`
     margin: 0 auto;
     display: none;
     background-color: ${colors.primaryBg};
-    @media screen and (max-width: 1280px) {
+
+    @media screen and (max-width: 1279.9px) {
       display: flex;
-      justify-content: center;
     }
   }
 
   &.mobile {
+    span {
+      background-color: ${colors.primaryBg};
+    }
+
     a {
       color: ${colors.gray};
     }

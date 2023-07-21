@@ -44,7 +44,7 @@ export const LoadMoreButton = styled.button`
   border: 2px solid RGBA(217, 217, 217, 1);
 
   transition: background-color ${transition.duration},
-    border-color ${transition.duration};
+    border-color ${transition.duration}, color ${transition.duration};
 
   @media screen and (min-width: 1280px) {
     margin-top: 117px;
@@ -52,7 +52,8 @@ export const LoadMoreButton = styled.button`
 
   &:hover,
   &:focus {
-    background-color: ${colors.accentBlue};
+    background-color: ${colors.primaryWhite};
     border-color: ${colors.accentGreen};
+    color: ${colors.accentGreen};
   }
 `;

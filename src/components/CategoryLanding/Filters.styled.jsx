@@ -17,7 +17,7 @@ export const ToggleFilterButton = styled.button`
 
   border: none;
   background-color: transparent;
-  color: ${colors.accentGreen};
+  color: ${colors.hideFilterGreen};
 `;
 
 export const FilterForm = styled.form`
@@ -88,6 +88,10 @@ export const Select = styled.select`
 
   color: ${colors.fontGray};
   background-color: transparent;
+`;
+
+export const ColorPickerWrapper = styled.div`
+  padding: 0 10px;
 `;
 
 export const ColorPickerButton = styled.input`
