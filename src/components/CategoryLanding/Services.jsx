@@ -8,12 +8,12 @@ const Services = () => {
   const { allProducts } = useProducts();
 
   return (
-    <>
+    <section>
       <BreadCrumbs padding={['24px 0 34px', '30px 0']} />
       <ServicesTitle>Services</ServicesTitle>
       <Filter allProducts={allProducts} />
       <CategoryItemsList allProducts={allProducts} />
-    </>
+    </section>
   );
 };
 

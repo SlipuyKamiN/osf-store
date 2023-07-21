@@ -22,6 +22,7 @@ export const Benefit = styled.li`
   @media screen and (min-width: 1280px) {
     gap: 40px;
     align-items: center;
+    padding-left: 0;
 
     &:nth-of-type(n) {
       margin-bottom: 0;

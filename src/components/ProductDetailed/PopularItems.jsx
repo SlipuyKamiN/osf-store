@@ -7,7 +7,7 @@ import {
 import useWindowDimensions from 'hooks/useWindowDimensions';
 import MobileGalleryTile from 'components/ProductTiles/MobileGalleryTile';
 import { useProducts } from 'context/ProductsContext';
-import BasicTile from 'components/ProductTiles/BasicTile';
+import PricedTile from 'components/ProductTiles/PricedTile';
 
 const PopularItems = () => {
   const { allProducts } = useProducts();
@@ -38,7 +38,11 @@ const PopularItems = () => {
       ) : (
         <ItemsList>
           {allProducts.slice(0, 4).map(item => (
-            <BasicTile item={item} key={item.imageUrl} />
+            <PricedTile
+              item={item}
+              key={item.imageUrl}
+              className="price-gray"
+            />
           ))}
         </ItemsList>
       )}

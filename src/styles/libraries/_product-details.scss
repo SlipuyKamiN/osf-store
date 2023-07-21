@@ -42,6 +42,10 @@
   &.active {
     border-color: #84bc22;
   }
+
+  @media screen and (min-width: 1280px) {
+    margin: 0;
+  }
 }
 
 .product-details .image-gallery-icon.image-gallery-fullscreen-button {

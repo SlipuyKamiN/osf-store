@@ -27,6 +27,7 @@ export const SectionTitle = styled.h2`
 
   @media screen and (min-width: 1280px) {
     font-size: 24px;
+    margin-bottom: 40px;
   }
 
   &::before,

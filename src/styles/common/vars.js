@@ -16,7 +16,6 @@ export const colors = {
   priceBuyNow: '#24C36C',
   pricedCardTitle: '#2C3E50',
   benefitsText: '#868380',
-  breadCrumbsGreen: '#87C440',
   hideFilterGreen: '#8DC73E',
 };
 

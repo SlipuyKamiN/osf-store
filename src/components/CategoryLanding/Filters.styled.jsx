@@ -2,14 +2,10 @@ import styled from '@emotion/styled';
 import { colors } from 'styles/common/vars';
 
 export const FilterSection = styled.section`
-  padding: 0 13px;
+  padding: 0;
   width: 100%;
   text-align: center;
   font-size: 14px;
-
-  @media screen and (min-width: 1280px) {
-    padding: 0 54px;
-  }
 `;
 
 export const ToggleFilterButton = styled.button`
