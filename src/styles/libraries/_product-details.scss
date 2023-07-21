@@ -46,6 +46,10 @@
   @media screen and (min-width: 1280px) {
     margin: 0;
   }
+
+  @media print {
+    margin: 0;
+  }
 }
 
 .product-details .image-gallery-icon.image-gallery-fullscreen-button {
