@@ -24,7 +24,7 @@ export const releaseSubscribe = async body => {
   return data;
 };
 
-export const registerUser = async body => {
+export const userLogIn = async body => {
   const data = await $.post(
     {
       url: `${BASE_URL}/users`,

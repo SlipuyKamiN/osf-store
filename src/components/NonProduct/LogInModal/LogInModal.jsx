@@ -18,7 +18,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm } from 'react-hook-form';
 import { validationSchema } from './validationSchema';
 import { notification } from 'components/Global/notification';
-import { registerUser } from 'API/API';
+import { userLogIn } from 'API/API';
 import { colors } from 'styles/common/vars';
 import { RotatingLines } from 'react-loader-spinner';
 
@@ -56,7 +56,7 @@ const LogInModal = ({ toggleModal }) => {
   const handleFormSubmit = async ({ email, password }) => {
     try {
       setIsLoading(true);
-      const data = await registerUser({ email, password });
+      const data = await userLogIn({ email, password });
 
       notification(`Welcome ${email} !`, 'success');
       toggleModal();
