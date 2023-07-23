@@ -25,15 +25,19 @@ export const ProductsProvider = ({ children }) => {
   const [allProducts, setAllProducts] = useState([]);
   const [wishlist, setWishlist] = useState(() => checkLocalStorage('wishlist'));
   const [cart, setCart] = useState(() => checkLocalStorage('cart'));
+  const [isLoading, setIsloading] = useState(false);
 
   useEffect(() => {
     (async () => {
+      setIsloading(true);
       try {
         const products = await getAllProducts();
 
         setAllProducts(products);
       } catch (error) {
         console.log(error);
+      } finally {
+        setIsloading(false);
       }
     })();
   }, []);
@@ -86,7 +90,9 @@ export const ProductsProvider = ({ children }) => {
   };
 
   return (
-    <ProductsContext.Provider value={{ allProducts, wishlist, cart, reducer }}>
+    <ProductsContext.Provider
+      value={{ allProducts, wishlist, cart, reducer, isLoading }}
+    >
       {children}
     </ProductsContext.Provider>
   );

@@ -12,6 +12,11 @@ const UserBar = ({ mobile = false }) => {
     setIsModalOpen(!isModalOpen);
   };
 
+  const cartTotalItemsCount = cart.reduce(
+    (total, item) => total + item.orderQuantity,
+    0
+  );
+
   return (
     <>
       <IconsList className={mobile && 'mobile'}>
@@ -28,7 +33,7 @@ const UserBar = ({ mobile = false }) => {
         </li>
         <li>
           <IconLink to="shopping-cart" className="icon-bag">
-            <IconCounter>{cart.length}</IconCounter>
+            <IconCounter>{cartTotalItemsCount}</IconCounter>
           </IconLink>
         </li>
       </IconsList>

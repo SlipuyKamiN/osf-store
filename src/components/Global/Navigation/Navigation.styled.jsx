@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { colors, transition } from 'styles/common/vars';
 
 export const Nav = styled.nav`
@@ -22,6 +22,24 @@ export const NavigationListItem = styled.li`
 `;
 
 export const NavigationLink = styled(Link)`
+  font-size: 14px;
+  padding: 19px 13px 25px;
+  text-transform: uppercase;
+  border-bottom: 3px solid transparent;
+  color: ${colors.fontGray};
+  transition: background-color ${transition.duration},
+    color ${transition.duration}, border-color ${transition.duration};
+
+  &:hover,
+  &:focus,
+  &.active {
+    color: ${colors.primaryWhite};
+    background-color: ${colors.primaryBg};
+    border-bottom: 3px solid ${colors.accentGreen};
+  }
+`;
+
+export const ReleaseLink = styled(NavLink)`
   font-size: 14px;
   padding: 19px 13px 25px;
   text-transform: uppercase;
@@ -77,6 +95,7 @@ export const ListLink = styled(Link)`
   &:hover,
   &:focus {
     color: ${colors.accentGreen};
+    text-decoration: underline;
   }
 `;
 

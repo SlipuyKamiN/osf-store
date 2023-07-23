@@ -1,6 +1,8 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { lazy } from 'react';
 import SharedLayout from 'components/SharedLayout/SharedLayout';
+import { useProducts } from 'context/ProductsContext';
+import LoadingSpinner from 'components/Global/LoadingSpinner';
 const AdditionalInfo = lazy(() =>
   import('components/ProductDetailed/ProductTabs/AdditionalInfo')
 );
@@ -22,6 +24,12 @@ const ProductDetailed = lazy(() =>
 );
 
 export const App = () => {
+  const { isLoading } = useProducts();
+
+  if (isLoading) {
+    return <LoadingSpinner />;
+  }
+
   return (
     <Routes>
       <Route path="/" element={<SharedLayout />}>

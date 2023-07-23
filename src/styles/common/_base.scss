@@ -13,6 +13,7 @@ body {
   color: #45413e;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-y: scroll;
 
   &.modal-open {
     overflow: hidden;

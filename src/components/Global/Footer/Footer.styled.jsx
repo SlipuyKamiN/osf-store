@@ -56,5 +56,6 @@ export const ListLink = styled(Link)`
   &:hover,
   &:focus {
     color: ${colors.accentGreen};
+    text-decoration: underline;
   }
 `;

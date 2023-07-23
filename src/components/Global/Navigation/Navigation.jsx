@@ -7,6 +7,7 @@ import {
   NavigationLink,
   NavigationList,
   NavigationListItem,
+  ReleaseLink,
   ServiceTitle,
   ServicesList,
   ServicesWrapper,
@@ -18,6 +19,10 @@ import CaretDownIcon from '../CaretDownIcon';
 
 const Navigation = () => {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+
+  const closeServices = () => {
+    setIsServicesOpen(false);
+  };
 
   return (
     <Nav>
@@ -34,16 +39,24 @@ const Navigation = () => {
           </NavigationLink>
         </NavigationListItem>
         <NavigationListItem>
-          <NavigationLink to="Company">Company</NavigationLink>
+          <NavigationLink to="company" onClick={closeServices}>
+            Company
+          </NavigationLink>
         </NavigationListItem>
         <NavigationListItem>
-          <NavigationLink to="Library">Library</NavigationLink>
+          <NavigationLink to="library" onClick={closeServices}>
+            Library
+          </NavigationLink>
         </NavigationListItem>
         <NavigationListItem>
-          <NavigationLink to="ContactUs">Contact us</NavigationLink>
+          <NavigationLink to="contact-us" onClick={closeServices}>
+            Contact us
+          </NavigationLink>
         </NavigationListItem>
         <NavigationListItem>
-          <NavigationLink to="countdown">Release</NavigationLink>
+          <ReleaseLink to="countdown" onClick={closeServices}>
+            Release
+          </ReleaseLink>
         </NavigationListItem>
       </NavigationList>
       {isServicesOpen && (
@@ -53,7 +66,9 @@ const Navigation = () => {
             <ServicesList>
               {services.productCategories.map(item => (
                 <li key={item}>
-                  <ListLink to={item}>{item}</ListLink>
+                  <ListLink to={item} onClick={closeServices}>
+                    {item}
+                  </ListLink>
                 </li>
               ))}
             </ServicesList>
@@ -63,7 +78,9 @@ const Navigation = () => {
             <ServicesList>
               {services.sale.map(item => (
                 <li key={item}>
-                  <ListLink to={item}>{item}</ListLink>
+                  <ListLink to={item} onClick={closeServices}>
+                    {item}
+                  </ListLink>
                 </li>
               ))}
             </ServicesList>
