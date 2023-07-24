@@ -16,5 +16,6 @@ export const Dimensions = styled.p`
   margin-top: 18px;
 
   font-size: 18px;
+  text-transform: capitalize;
   text-align: center;
 `;
