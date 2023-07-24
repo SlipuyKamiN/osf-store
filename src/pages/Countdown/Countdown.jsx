@@ -2,7 +2,7 @@ import {
   CountdownMain,
   CounterSection,
 } from 'components/NonProduct/Countdown/Countdown.styled';
-import Counter from 'components/NonProduct/Countdown/Counter';
+import Counter from 'components/NonProduct/Countdown/Counters';
 import Form from 'components/NonProduct/Countdown/Form';
 import Title from 'components/NonProduct/Countdown/Title';
 
