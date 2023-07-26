@@ -3,7 +3,7 @@ import { colors, transition } from 'styles/common/vars';
 import salesImagePath from 'images/sales.png';
 
 export const SalesCard = styled.div`
-  display: none;
+  display: block;
   width: 270px;
   text-align: center;
 

@@ -43,18 +43,21 @@ export const OopsWrapper = styled.div`
   padding: 130px 0;
   margin-bottom: 24px;
 
-  text-align: right;
+  text-align: center;
   flex-shrink: 0;
 
   background-image: url(${ErrorImgPath});
   background-size: contain;
-  background-position-x: -78px;
+  background-position-x: center;
   background-repeat: no-repeat;
 
   @media screen and (min-width: 1280px) {
     width: 368px;
     height: 368px;
     margin-bottom: 0;
+
+    text-align: right;
+    background-position-x: -78px;
   }
 `;
 
