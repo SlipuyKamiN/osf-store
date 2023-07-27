@@ -3,9 +3,15 @@ import { Link } from 'react-router-dom';
 
 export const BannerSection = styled.section`
   display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 30px;
   padding-top: 28px;
   padding-bottom: 28px;
+
+  @media screen and (min-width: 1280px) {
+    flex-direction: row;
+  }
 `;
 
 export const Banner = styled.div`

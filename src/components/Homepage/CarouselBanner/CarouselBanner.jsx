@@ -11,6 +11,7 @@ const CarouselBanner = () => {
         originalWidth="100%"
         originalHeight="250px"
         items={carouselBannerImages}
+        autoPlay={true}
         showNav={false}
         showThumbnails={false}
         showFullscreenButton={false}
