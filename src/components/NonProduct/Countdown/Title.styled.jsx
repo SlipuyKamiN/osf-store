@@ -7,10 +7,14 @@ export const TitleSection = styled.section`
 `;
 
 export const ReleaseTitle = styled.h1`
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 900;
 
   margin-bottom: 10px;
+
+  @media screen and (min-width: 1280px) {
+    font-size: 30px;
+  }
 `;
 
 export const ReleaseDescription = styled.p`

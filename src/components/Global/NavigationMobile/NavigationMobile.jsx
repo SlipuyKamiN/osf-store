@@ -63,6 +63,12 @@ const NavigationMobile = () => {
                 <CaretDownIcon />
               </NavigationLink>
             </li>
+            <li key="countdown">
+              <NavigationLink to="countdown">
+                Release
+                <CaretDownIcon />
+              </NavigationLink>
+            </li>
           </NavigationList>
           <Img
             srcSet={`${navImage} 1x, ${navImage2x} 2x`}
